@@ -1,0 +1,23 @@
+machine:
+  timezone: Europe/London
+  python:
+    version: 2.7.12
+
+dependencies:
+  cache_directories:
+    - "/opt/circleci/.pyenv/versions/2.7.9/lib"
+
+checkout:
+  post:
+    - pip install -r test-requirements.txt
+
+test:
+  override:
+    - declare -x PYTHONPATH=$PWD/src; python -m unittest discover -s tests
+
+deployment:
+  master:
+    branch: master
+    commands:
+      - chmod a+x buildrpms.sh
+      - ./buildrpms.sh
