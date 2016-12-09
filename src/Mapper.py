@@ -64,3 +64,15 @@ class Mapper(object):
                 pass
         #if we got here then all of the mappings failed
         raise NoMappingFound("No mapping matched the provided metadata.  Failed mappings were: {0}".format(failed_mappings))
+    
+if __name__ == "__main__":
+    from sys import argv
+    from Parser import Parser
+    from pprint import pprint
+    
+    print "Testing mappings from source file {0}".format(argv[1])
+    with open(argv[1]) as f:
+        p = Parser(f.read())
+        m = Mapper()
+        print "Mapping results:"
+        pprint(m.map_metadata(p))

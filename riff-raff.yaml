@@ -1,0 +1,10 @@
+regions: [eu-west-1]
+stacks: [multimedia]
+deployments:
+  video-ipub-lambda:
+    type: aws-lambda
+    parameters:
+      bucket: gnm-multimedia-rr-deployables
+      functionNames: [video-ipub-lambda-] #matching the name of the function in cloudformation
+      fileName: video-ipub-lambda.zip
+      prefixStack: false

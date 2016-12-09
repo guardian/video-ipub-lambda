@@ -1,0 +1,29 @@
+{
+  "name": "video-ipub-lambda",
+  "cloudformation": false,
+  "version": "1.0.0",
+  "description": "Lambda to publish video details to interactive publisher",
+  "scripts": {
+    "deploy": "gulp deploy",
+    "riffraff-artefact": "export ARTEFACT_PATH=`pwd`"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guardian/video-ipub-lambda.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/guardian/video-ipub-lambda/issues"
+  },
+  "homepage": "https://github.com/guardian/video-ipub-lambda#readme",
+  "dependencies": {
+    "exec-chainable": "0.0.3",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-file": "^0.3.0",
+    "gulp-yaml": "^1.0.1",
+    "gulp-zip": "^3.2.0",
+    "node-riffraff-artefact": "^1.8.1"
+  }
+}

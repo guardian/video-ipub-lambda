@@ -2,9 +2,12 @@ machine:
   timezone: Europe/London
   python:
     version: 2.7.12
+  node:
+    version: 6.4.0
 
 dependencies:
   pre:
+    - npm install
   #mysql-connector is not available in pip. grrrrr.
     - curl http://cdn.mysql.com//Downloads/Connector-Python/mysql-connector-python-2.1.4.tar.gz > /tmp/mysql-connector-python-2.1.4.tar.gz
     - cd /tmp; tar xvzf mysql-connector-python-2.1.4.tar.gz
@@ -22,6 +25,6 @@ test:
 
 deployment:
   master:
-    branch: master
+    branch: /.*/
     commands:
-      - exit 0
+      - ./builddeployable.sh

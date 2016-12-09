@@ -22,6 +22,8 @@ def handler(event, context):
     else:
         raven_client = None
         
+    print "RIFFRAFF FTW!!!!"
+    
     logging.info("Event handler triggered")
     print "Event was {0}".format(event)
     

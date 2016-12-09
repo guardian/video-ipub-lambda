@@ -1,6 +1,7 @@
-#!/usr/bin/env bash -e
+#!/bin/bash
 
 BUILDDIR=$PWD/deployable
+mkdir -p video-ipub-lambda
 mkdir -p ${BUILDDIR}
 cp -r src/* ${BUILDDIR}
 pip install -r requirements.txt -t ${BUILDDIR}
@@ -14,8 +15,14 @@ fi
 cd /tmp/mysql-connector-python-2.1.4; python ./setup.py install --home=${BUILDDIR} --install-lib ${BUILDDIR}
 
 cd ${BUILDDIR}
-zip -r ../video-ipub-lambda.zip *
+zip -r ../video-ipub-lambda/video-ipub-lambda.zip *
 cd ..
-rm -rf ${BUILDDIR}
 
-aws s3 cp video-ipub-lambda.zip s3://gnm-multimedia-rr-deployables/multimedia/CODE/video-ipub-lambda/video-ipub-lambda.zip
+declare -x ARTEFACT_PATH=${BUILDDIR}/..
+npm run deploy
+
+if [ "$?" != "0" ]; then
+    exit $? #propagate error for circleci
+fi
+
+rm -rf ${BUILDDIR}
