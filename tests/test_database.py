@@ -1,7 +1,6 @@
 from __future__ import absolute_import
 import unittest
 import os
-from mock import MagicMock
 import logging
 
 
