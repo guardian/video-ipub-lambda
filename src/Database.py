@@ -85,4 +85,42 @@ class Database(object):
             return self._find_in_database(filename)
         except NotFound:
             return self._make_new_record(filename,meta['octopus ID'],meta['project_name'])
+    
+    def _get_sqlargs(self,meta):
+        fields = []
+        placeholders = []
+        values = []
+        for k,v in meta.items():
+            fields.append(k)
+            placeholders.append("%s")
+            values.append(v)
+            
+        return (fields, placeholders, values)
+    
+    def add_encoding(self,contentid,meta):
+        meta.update({'contentid': contentid})
+        (fields, placeholders, values) = self._get_sqlargs(meta)
+
+        print meta
         
+        cur = self._conn.cursor()
+        cur.execute("INSERT INTO encodings ({f}) values ({p})"
+                      .format(f=",".join(fields),p=",".join(placeholders)),
+                    tuple(values))
+        
+        self._conn.commit()
+        cur.close()
+        return cur.lastrowid
+    
+    def get_encoding(self,contentid,limit=None):
+        cur = self._conn.cursor()
+        sqlcmd = "SELECT * from encodings where contentid=%s order by encodingid"
+        if isinstance(limit,int):
+            sqlcmd += " limit {0}".format(limit)
+            
+        cur.execute(sqlcmd, (contentid,))
+        
+        fields = map(lambda x:x[0],cur.description)
+        rtn = map(lambda row: dict(zip(fields,row)), cur.fetchall())
+        cur.close()
+        return rtn

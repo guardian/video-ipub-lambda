@@ -50,4 +50,47 @@ class TestDatabase(unittest.TestCase):
         with self.assertRaises(NotFound):
             d._find_in_database("some_invalid pathname!")
             
-    
+    def test_add_encoding(self):
+        from Database import Database, NotFound
+        
+        d = Database(make_connection=True)
+        
+        fake_id = 9999
+        testmeta = {u'abitrate'    : '128000',
+                  u'acodec'      : 'aac',
+                  u'aspect'      : '16x9',
+                  u'duration'    : 123.45,
+                  u'fcs_id'      : 'KP-123456-1',
+                  u'file_size'   : 234125,
+                  u'format'      : 'mp4',
+                  u'frame_height': '720',
+                  u'frame_width' : '1280',
+                  u'mobile'      : '0',
+                  u'multirate'   : '0',
+                  u'octopus_id'  : '23455',
+                  u'url'         : 'http://path/to/rendition.mp4',
+                  u'vbitrate'    : '768000',
+                  u'vcodec'      : 'h264'
+                  }
+        expectedmeta = {u'abitrate'    : 128000,
+                    u'acodec'      : 'aac',
+                    u'aspect'      : '16x9',
+                    u'duration'    : 123.45,
+                    u'fcs_id'      : 'KP-123456-1',
+                    u'file_size'   : 234125,
+                    u'format'      : 'mp4',
+                    u'frame_height': 720,
+                    u'frame_width' : 1280,
+                    u'mobile'      : 0,
+                    u'multirate'   : 0,
+                    u'octopus_id'  : 23455,
+                    u'url'         : 'http://path/to/rendition.mp4',
+                    u'vbitrate'    : 768000,
+                    u'vcodec'      : 'h264'
+                    }
+
+        encid = d.add_encoding(fake_id,testmeta)
+        self.assertIsNotNone(encid)
+        
+        fetched_row = d.get_encoding(fake_id,limit=1)
+        self.assertDictContainsSubset(expectedmeta,fetched_row[0])

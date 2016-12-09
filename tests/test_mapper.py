@@ -1,7 +1,7 @@
 from __future__ import absolute_import
 import unittest
 import os
-from unittest.mock import MagicMock
+from mock import MagicMock
 
 
 class TestMapperCore(object):
