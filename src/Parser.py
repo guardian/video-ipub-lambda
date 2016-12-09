@@ -7,10 +7,24 @@ class Parser(object):
         self._data = ET.parse(filename)
         
     def get(self,key,default=None):
-        elem = self._data.find("meta[@value='inmeta']/meta[@name='{0}']".format(key))
+        keyparts = key.split(':')
+        if len(keyparts)==1:
+            searchpath = "meta[@value='inmeta']/meta[@name='{0}']".format(key)
+        elif len(keyparts)==2:
+            section=keyparts[0]
+            if section=="meta": section="meta-source"
+            searchpath = "meta[@name='{0}']/meta[@name='{1}']".format(section,keyparts[1])
+        elif len(keyparts)==3:
+            section=keyparts[0]
+            subsection=keyparts[1]
+            searchpath = "meta[@name='{0}']/meta[@name='type'][@value='{1}']/../meta[@name='{2}']".format(section,subsection,keyparts[2])
+        else:
+            raise KeyError("too many : in key!")
+        
+        elem = self._data.find(searchpath)
         if elem is None:
             if default is None:
-                raise KeyError
+                raise KeyError(key)
             else:
                 return default
         return elem.get('value')
