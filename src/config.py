@@ -1,3 +1,5 @@
+from os import environ
+
 DATABASE = {
     'user': "ubuntu",
     'password': "",

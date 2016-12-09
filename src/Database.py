@@ -15,16 +15,23 @@ class Database(object):
     FILENAME_FIELDS = ['filename','originalFilename']
     CHOPPER = re.compile(r'\.[^\.]+$')
     
-    def __init__(self,make_connection=True):
+    def __init__(self,config=None,make_connection=True):
         self._conn = None
-        if(make_connection): self.do_connect()
+        if(make_connection): self.do_connect(config)
         
-    def do_connect(self):
+    def do_connect(self,configdict=None):
         import config
         
-        if not hasattr(config,'DATABASE'):
-            raise RuntimeError("DATABASE dictionary is missing from config.py")
-        self._conn = mysql.connect(**config.DATABASE)
+        if isinstance(configdict,dict):
+            self._conn = mysql.connect(**configdict)
+            return
+        
+        if hasattr(config,'DATABASE'):
+            self._conn = mysql.connect(**config.DATABASE)
+            return
+            
+        raise RuntimeError("DATABASE dictionary is missing from config.py, or environment variables are not set")
+        
     
     def _get_filename(self,meta):
         """
