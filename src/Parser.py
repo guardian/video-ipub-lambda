@@ -2,9 +2,9 @@ import xml.etree.cElementTree as ET
 
 
 class Parser(object):
-    def __init__(self,filename):
+    def __init__(self,datacontent):
         super(Parser,self).__init__()
-        self._data = ET.parse(filename)
+        self._data = ET.fromstring(datacontent)
         
     def get(self,key,default=None):
         keyparts = key.split(':')

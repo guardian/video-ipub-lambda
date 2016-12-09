@@ -18,8 +18,8 @@ class TestMapperCore(object):
         from Mapper import Mapper
         from Parser import Parser
         from pprint import pprint
-        path = os.path.join(os.path.dirname(__file__), "testdata/160615ClericInterview.meta.xml")
-        p = Parser(path)
+
+        p = Parser("<?xml version=\"1.0\"?><meta-data></meta-data>")
         p.get = MagicMock(side_effect=self._return_datakey)
         m = Mapper()
         mapped_data = m.map_metadata(p)
