@@ -57,5 +57,4 @@ def handler(event, context):
             logging.error(traceback.format_exc())
             if raven_client:
                 print "Logging to Raven"
-                raven_client.user_context(event)
                 raven_client.captureException()
