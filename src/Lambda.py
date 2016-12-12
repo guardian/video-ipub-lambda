@@ -5,9 +5,6 @@ import raven
 LOGFORMAT = '%(asctime)-15s - %(name)s [%(threadName)s] %(funcName)s - %(levelname)s - %(message)s'
 main_log_level = logging.DEBUG
 
-logging.basicConfig(level=main_log_level,format=LOGFORMAT)
-
-
 def handler(event, context):
     from Parser import Parser
     from Mapper import Mapper
@@ -15,14 +12,14 @@ def handler(event, context):
     from pprint import pprint
     import config
     from os import environ
+
+    logging.basicConfig(level=main_log_level, format=LOGFORMAT)
     
     if 'RAVEN_DSN' in environ:
         raven_client = raven.Client(environ['RAVEN_DSN'])
         print "Raven intialised at {0}".format(environ['RAVEN_DSN'])
     else:
         raven_client = None
-        
-    print "RIFFRAFF FTW!!!!"
     
     logging.info("Event handler triggered")
     print "Event was {0}".format(event)
