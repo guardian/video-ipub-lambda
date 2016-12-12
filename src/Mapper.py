@@ -51,15 +51,30 @@ class Mapper(object):
         }
     ]
 
+    FIELD_DEFAULTS = {
+        u'mobile': '0',
+        u'multirate': '0'
+    }
+    
     def _do_mapping(self, mappingdict, parser_instance):
-        return dict(map(lambda item: (item[0],parser_instance.get(item[1])),mappingdict.items()))
+        return dict(map(lambda mappingentry: (
+            mappingentry[0],
+            parser_instance.get(mappingentry[1],
+                                default=self.FIELD_DEFAULTS[mappingentry[0]] if mappingentry[0] in self.FIELD_DEFAULTS else None)
+        ), mappingdict.items()))
         
     def map_metadata(self, parser_instance):
+        applied_mapping=0
         failed_mappings = []
         for mappingdict in self.FIELD_MAPPINGS:
             try:
-                return self._do_mapping(mappingdict,parser_instance)
+                mapped_data = self._do_mapping(mappingdict,parser_instance)
+                for k,v in mapped_data.items():
+                    if k in self.FIELD_MULTIPLIERS[applied_mapping]:
+                        mapped_data[k] = float(mapped_data[k]) * self.FIELD_MULTIPLIERS[applied_mapping][k]
+                return mapped_data
             except KeyError as e:
+                applied_mapping +=1
                 failed_mappings.append(str(e))
                 pass
         #if we got here then all of the mappings failed

@@ -21,6 +21,7 @@ class TestParser(unittest.TestCase):
         self.assertEqual(p.get('meta:gnm_master_website_headline'), "150616 Clare Aus")
         self.assertEqual(p.get('movie:container'), "mp4")
         self.assertEqual(p.get('track:vide:index'), "1")
+        self.assertEqual(p.get('meta:invalid-key-with-default', default="boo!"), "boo!")
         
     def test_invalid_metadata_raise(self):
         from Parser import Parser

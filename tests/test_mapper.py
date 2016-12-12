@@ -11,9 +11,15 @@ class TestMapperCore(object):
     TESTDATA = {}
     TESTMAPPED = {}
     
-    def _return_datakey(self, k):
-        return self.TESTDATA[k]
-    
+    def _return_datakey(self, k, default=None):
+        if k in self.TESTDATA:
+            return self.TESTDATA[k]
+        else:
+            if default is not None:
+                return default
+            else:
+                raise KeyError
+        
     def test_get_metadata(self):
         from Mapper import Mapper
         from Parser import Parser
@@ -29,7 +35,7 @@ class TestMapperCore(object):
 
 class TestMappingOne(unittest.TestCase, TestMapperCore):
     TESTDATA = {
-        u'track:audi:bitrate': "128000",
+        u'track:audi:bitrate': "128",
         u'track:audi:format' : "aac",
         u'meta:aspect_ratio' : "16x9",
         u'movie:duration'    : 123.45,
@@ -42,12 +48,12 @@ class TestMappingOne(unittest.TestCase, TestMapperCore):
         u'meta:is_multirate' : "0",
         u'meta:octopus ID'   : "12345678",
         u'meta:cdn_url'      : "http://path/to/rendition.mp4",
-        u'track:vide:bitrate': "768000",
+        u'track:vide:bitrate': "768",
         u'track:vide:format' : "h264"
     }
     
     TESTMAPPED = {
-        u'abitrate'    : '128000',
+        u'abitrate'    : 128.0,
         u'acodec'      : 'aac',
         u'aspect'      : '16x9',
         u'duration'    : 123.45,
@@ -60,7 +66,7 @@ class TestMappingOne(unittest.TestCase, TestMapperCore):
         u'multirate'   : '0',
         u'octopus_id'  : '12345678',
         u'url'         : 'http://path/to/rendition.mp4',
-        u'vbitrate'    : '768000',
+        u'vbitrate'    : 768.0,
         u'vcodec'      : 'h264'
     }
 
@@ -84,7 +90,7 @@ class TestMappingTwo(unittest.TestCase, TestMapperCore):
         u'track:vide:codec'                : "h264"
     }
     
-    TESTMAPPED = {u'abitrate'    : '128000',
+    TESTMAPPED = {u'abitrate'    : 128.0,
                   u'acodec'      : 'aac',
                   u'aspect'      : '16x9',
                   u'duration'    : 123.45,
@@ -97,6 +103,42 @@ class TestMappingTwo(unittest.TestCase, TestMapperCore):
                   u'multirate'   : '0',
                   u'octopus_id'  : '23455',
                   u'url'         : 'http://path/to/rendition.mp4',
-                  u'vbitrate'    : '768000',
+                  u'vbitrate'    : 768.0,
                   u'vcodec'      : 'h264'
                   }
+
+
+class TestMappingIncomplete(unittest.TestCase, TestMapperCore):
+    TESTDATA = {
+        u'track:audi:bitrate': "128",
+        u'track:audi:format' : "aac",
+        u'meta:aspect_ratio' : "16x9",
+        u'movie:duration'    : 123.45,
+        u'meta:FCS asset ID' : "KP-1234-2",
+        u'movie:size'        : 53234,
+        u'movie:format'      : "mp4",
+        u'track:vide:height' : "720",
+        u'track:vide:width'  : "1280",
+        u'meta:octopus ID'   : "12345678",
+        u'meta:cdn_url'      : "http://path/to/rendition.mp4",
+        u'track:vide:bitrate': "768",
+        u'track:vide:format' : "h264"
+    }
+    
+    TESTMAPPED = {
+        u'abitrate'    : 128.0,
+        u'acodec'      : 'aac',
+        u'aspect'      : '16x9',
+        u'duration'    : 123.45,
+        u'fcs_id'      : 'KP-1234-2',
+        u'file_size'   : 53234,
+        u'format'      : 'mp4',
+        u'frame_height': '720',
+        u'frame_width' : '1280',
+        u'mobile'      : '0',
+        u'multirate'   : '0',
+        u'octopus_id'  : '12345678',
+        u'url'         : 'http://path/to/rendition.mp4',
+        u'vbitrate'    : 768.0,
+        u'vcodec'      : 'h264'
+    }
