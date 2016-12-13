@@ -54,4 +54,8 @@ def handler(event, context):
             logging.error(traceback.format_exc())
             if raven_client:
                 print "Logging to Raven"
+                try:
+                    raven_client.extra_context({'source': record['Sns']['Message']})
+                except:
+                    raven_client.extra_context({'source': '(not available)'})
                 raven_client.captureException()
