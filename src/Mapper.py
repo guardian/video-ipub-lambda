@@ -54,7 +54,7 @@ class Mapper(object):
     FIELD_DEFAULTS = {
         u'mobile': '0',
         u'multirate': '0',
-        u'aspect_ratio': '16x9'
+        u'aspect': '16x9'
     }
     
     def _do_mapping(self, mappingdict, parser_instance):
