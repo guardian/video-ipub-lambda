@@ -41,6 +41,7 @@ def handler(event, context):
         raise
     
     for record in event['Records']:
+        document = "(not yet parsed)"
         try:
             document = Parser(record['Sns']['Message'])
             m = Mapper()
@@ -52,6 +53,9 @@ def handler(event, context):
             
         except Exception as e:
             logging.error(traceback.format_exc())
+            logging.error("Incoming metadata was:")
+            logging.error(str(document))
+            
             if raven_client:
                 print "Logging to Raven"
                 try:
