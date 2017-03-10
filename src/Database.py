@@ -91,7 +91,7 @@ class Database(object):
         try:
             return self._find_in_database(filename)
         except NotFound:
-            return self._make_new_record(filename,meta['octopus ID'],meta['project_name'])
+            return self._make_new_record(filename,meta['octopus_id'],meta.get('project', "(no project)"))
     
     def _get_sqlargs(self,meta):
         fields = []
