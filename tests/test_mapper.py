@@ -49,7 +49,8 @@ class TestMappingOne(unittest.TestCase, TestMapperCore):
         u'meta:octopus ID'   : "12345678",
         u'meta:cdn_url'      : "http://path/to/rendition.mp4",
         u'track:vide:bitrate': "768",
-        u'track:vide:format' : "h264"
+        u'track:vide:format' : "h264",
+        u'filename': "some_filename.mxf"
     }
     
     TESTMAPPED = {
@@ -67,7 +68,8 @@ class TestMappingOne(unittest.TestCase, TestMapperCore):
         u'octopus_id'  : '12345678',
         u'url'         : 'http://path/to/rendition.mp4',
         u'vbitrate'    : 768.0,
-        u'vcodec'      : 'h264'
+        u'vcodec'      : 'h264',
+        u'filename': "some_filename.mxf"
     }
 
 
@@ -87,7 +89,8 @@ class TestMappingTwo(unittest.TestCase, TestMapperCore):
         u'meta:gnm_master_generic_titleid' : "23455",
         u'meta:cdn_url'                    : "http://path/to/rendition.mp4",
         u'track:vide:h264_settings_bitrate': "768000",
-        u'track:vide:codec'                : "h264"
+        u'track:vide:codec'                : "h264",
+        u'originalFilename': "some_filename.mxf"
     }
     
     TESTMAPPED = {u'abitrate'    : 128.0,
@@ -104,7 +107,8 @@ class TestMappingTwo(unittest.TestCase, TestMapperCore):
                   u'octopus_id'  : '23455',
                   u'url'         : 'http://path/to/rendition.mp4',
                   u'vbitrate'    : 768.0,
-                  u'vcodec'      : 'h264'
+                  u'vcodec'      : 'h264',
+                  u'originalFilename': "some_filename.mxf"
                   }
 
 
@@ -122,7 +126,8 @@ class TestMappingIncomplete(unittest.TestCase, TestMapperCore):
         u'meta:octopus ID'   : "12345678",
         u'meta:cdn_url'      : "http://path/to/rendition.mp4",
         u'track:vide:bitrate': "768",
-        u'track:vide:format' : "h264"
+        u'track:vide:format' : "h264",
+        u'filename': "rendition.mxf"
     }
     
     TESTMAPPED = {
@@ -140,5 +145,6 @@ class TestMappingIncomplete(unittest.TestCase, TestMapperCore):
         u'octopus_id'  : '12345678',
         u'url'         : 'http://path/to/rendition.mp4',
         u'vbitrate'    : 768.0,
-        u'vcodec'      : 'h264'
+        u'vcodec'      : 'h264',
+        u'filename': "rendition.mxf"
     }

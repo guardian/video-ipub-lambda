@@ -30,7 +30,8 @@ class Mapper(object):
             u'octopus_id'  : u'meta:octopus ID',
             u'url'         : u'meta:cdn_url',
             u'vbitrate'    : u'track:vide:bitrate',
-            u'vcodec'      : u'track:vide:format'
+            u'vcodec'      : u'track:vide:format',
+            u'filename'    : u'filename'
         },
         {
             u'abitrate'    : u'tracks:audi:aac_settings_bitrate',
@@ -47,7 +48,8 @@ class Mapper(object):
             u'octopus_id'  : u'meta:gnm_master_generic_titleid',
             u'url'         : u'meta:cdn_url',
             u'vbitrate'    : u'track:vide:h264_settings_bitrate',
-            u'vcodec'      : u'track:vide:codec'
+            u'vcodec'      : u'track:vide:codec',
+            u'originalFilename': u'originalFilename'
         }
     ]
 
