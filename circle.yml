@@ -19,10 +19,6 @@ database:
   override:
     - mysql -u ubuntu circle_test < tests/testdata/dbschema.sql
 
-test:
-  override:
-    - declare -x PYTHONPATH=$PWD/src:$PYTHONPATH; python -m unittest discover -s tests
-
 deployment:
   master:
     branch: /.*/

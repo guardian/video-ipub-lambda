@@ -25,6 +25,9 @@ class TestMapperCore(object):
         from Parser import Parser
         from pprint import pprint
 
+        #if we're run directly rather than through a subclass there is nothing to test.
+        if len(self.TESTDATA.items())==0: return
+
         p = Parser("<?xml version=\"1.0\"?><meta-data></meta-data>")
         p.get = MagicMock(side_effect=self._return_datakey)
         m = Mapper()
