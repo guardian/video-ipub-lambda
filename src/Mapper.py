@@ -1,3 +1,6 @@
+from CompositeMapping import BaseMapping
+from JoinMapping import JoinMapping
+
 class NoMappingFound(StandardError):
     pass
 
@@ -16,38 +19,38 @@ class Mapper(object):
     
     FIELD_MAPPINGS = [
         {
-            u'abitrate'    : u'track:audi:bitrate',
-            u'acodec'      : u'track:audi:format',
-            u'aspect'      : u'meta:aspect_ratio',
-            u'duration'    : u'movie:duration',
-            u'fcs_id'      : u'meta:FCS asset ID',
-            u'file_size'   : u'movie:size',
-            u'format'      : u'movie:format',
-            u'frame_height': u'track:vide:height',
-            u'frame_width' : u'track:vide:width',
-            u'mobile'      : u'meta:for_mobile',
-            u'multirate'   : u'meta:is_multirate',
-            u'octopus_id'  : u'meta:octopus ID',
-            u'url'         : u'meta:cdn_url',
-            u'vbitrate'    : u'track:vide:bitrate',
-            u'vcodec'      : u'track:vide:format'
+            u'abitrate'    : BaseMapping(u'track:audi:bitrate'),
+            u'acodec'      : BaseMapping(u'track:audi:format'),
+            u'aspect'      : BaseMapping(u'meta:aspect_ratio'),
+            u'duration'    : BaseMapping(u'movie:duration'),
+            u'fcs_id'      : BaseMapping(u'meta:FCS asset ID'),
+            u'file_size'   : BaseMapping(u'movie:size'),
+            u'format'      : BaseMapping(u'movie:format'),
+            u'frame_height': BaseMapping(u'track:vide:height'),
+            u'frame_width' : BaseMapping(u'track:vide:width'),
+            u'mobile'      : BaseMapping(u'meta:for_mobile'),
+            u'multirate'   : BaseMapping(u'meta:is_multirate'),
+            u'octopus_id'  : BaseMapping(u'meta:octopus ID'),
+            u'url'         : BaseMapping(u'meta:cdn_url'),
+            u'vbitrate'    : BaseMapping(u'track:vide:bitrate'),
+            u'vcodec'      : BaseMapping(u'track:vide:format')
         },
         {
-            u'abitrate'    : u'tracks:audi:aac_settings_bitrate',
-            u'acodec'      : u'tracks:audi:codec',
-            u'aspect'      : u'meta:aspect_ratio',
-            u'duration'    : u'meta:durationSeconds',
-            u'fcs_id'      : u'meta:itemId',
-            u'file_size'   : u'movie:size',
-            u'format'      : u'movie:extension',
-            u'frame_height': u'track:vide:height',
-            u'frame_width' : u'track:vide:width',
-            u'mobile'      : u'meta:for_mobile',
-            u'multirate'   : u'meta:is_multirate',
-            u'octopus_id'  : u'meta:gnm_master_generic_titleid',
-            u'url'         : u'meta:cdn_url',
-            u'vbitrate'    : u'track:vide:h264_settings_bitrate',
-            u'vcodec'      : u'track:vide:codec'
+            u'abitrate'    : BaseMapping(u'tracks:audi:aac_settings_bitrate'),
+            u'acodec'      : BaseMapping(u'tracks:audi:codec'),
+            u'aspect'      : BaseMapping(u'meta:aspect_ratio'),
+            u'duration'    : BaseMapping(u'meta:durationSeconds'),
+            u'fcs_id'      : JoinMapping(u'meta:itemId',u'meta:__version'),
+            u'file_size'   : BaseMapping(u'movie:size'),
+            u'format'      : BaseMapping(u'movie:extension'),
+            u'frame_height': BaseMapping(u'track:vide:height'),
+            u'frame_width' : BaseMapping(u'track:vide:width'),
+            u'mobile'      : BaseMapping(u'meta:for_mobile'),
+            u'multirate'   : BaseMapping(u'meta:is_multirate'),
+            u'octopus_id'  : BaseMapping(u'meta:gnm_master_generic_titleid'),
+            u'url'         : BaseMapping(u'meta:cdn_url'),
+            u'vbitrate'    : BaseMapping(u'track:vide:h264_settings_bitrate'),
+            u'vcodec'      : BaseMapping(u'track:vide:codec')
         }
     ]
 
@@ -60,8 +63,10 @@ class Mapper(object):
     def _do_mapping(self, mappingdict, parser_instance):
         return dict(map(lambda mappingentry: (
             mappingentry[0],
-            parser_instance.get(mappingentry[1],
-                                default=self.FIELD_DEFAULTS[mappingentry[0]] if mappingentry[0] in self.FIELD_DEFAULTS else None)
+            mappingentry[1].evaluate(parser_instance,
+                                    default=self.FIELD_DEFAULTS[mappingentry[0]] if mappingentry[0] in self.FIELD_DEFAULTS else None)
+            # parser_instance.get(mappingentry[1],
+            #                     default=self.FIELD_DEFAULTS[mappingentry[0]] if mappingentry[0] in self.FIELD_DEFAULTS else None)
         ), mappingdict.items()))
         
     def map_metadata(self, parser_instance):

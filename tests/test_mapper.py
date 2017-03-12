@@ -77,7 +77,7 @@ class TestMappingTwo(unittest.TestCase, TestMapperCore):
         u'tracks:audi:codec'               : "aac",
         u'meta:aspect_ratio'               : "16x9",
         u'meta:durationSeconds'            : 123.45,
-        u'meta:itemId'                     : "KP-123456-1",
+        u'meta:itemId'                     : "KP-123456",
         u'movie:size'                      : 234125,
         u'movie:extension'                 : "mp4",
         u'track:vide:height'               : "720",
@@ -87,14 +87,15 @@ class TestMappingTwo(unittest.TestCase, TestMapperCore):
         u'meta:gnm_master_generic_titleid' : "23455",
         u'meta:cdn_url'                    : "http://path/to/rendition.mp4",
         u'track:vide:h264_settings_bitrate': "768000",
-        u'track:vide:codec'                : "h264"
+        u'track:vide:codec'                : "h264",
+        u'__version'                       : "2"
     }
     
     TESTMAPPED = {u'abitrate'    : 128.0,
                   u'acodec'      : 'aac',
                   u'aspect'      : '16x9',
                   u'duration'    : 123.45,
-                  u'fcs_id'      : 'KP-123456-1',
+                  u'fcs_id'      : 'KP-123456-2',
                   u'file_size'   : 234125,
                   u'format'      : 'mp4',
                   u'frame_height': '720',
