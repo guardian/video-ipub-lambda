@@ -32,7 +32,10 @@ class Database(object):
             
         raise RuntimeError("DATABASE dictionary is missing from config.py, or environment variables are not set")
         
-    
+    @staticmethod
+    def _remove_extension(string):
+        return re.sub('\.[^\.]+$','',string)
+        
     def _get_filename(self,meta):
         """
         Scans FILENAME_FIELDS looking for a value that is set
@@ -41,7 +44,7 @@ class Database(object):
         """
         for f in self.FILENAME_FIELDS:
             if f in meta:
-                return meta[f]
+                return self._remove_extension(meta[f])
         return None
     
     def _make_filebase(self,filename):
