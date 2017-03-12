@@ -20,7 +20,7 @@ class TestBaseMapping(unittest.TestCase):
                 raise KeyError
     
     def test_evaluate(self):
-        from CompositeMapping import BaseMapping
+        from BaseMapping import BaseMapping
         from Parser import Parser
         from pprint import pprint
 

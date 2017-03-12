@@ -1,5 +1,6 @@
-from CompositeMapping import BaseMapping
+from BaseMapping import BaseMapping
 from JoinMapping import JoinMapping
+
 
 class NoMappingFound(StandardError):
     pass
@@ -65,8 +66,6 @@ class Mapper(object):
             mappingentry[0],
             mappingentry[1].evaluate(parser_instance,
                                     default=self.FIELD_DEFAULTS[mappingentry[0]] if mappingentry[0] in self.FIELD_DEFAULTS else None)
-            # parser_instance.get(mappingentry[1],
-            #                     default=self.FIELD_DEFAULTS[mappingentry[0]] if mappingentry[0] in self.FIELD_DEFAULTS else None)
         ), mappingdict.items()))
         
     def map_metadata(self, parser_instance):

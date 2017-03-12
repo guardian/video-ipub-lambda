@@ -18,7 +18,7 @@ class TestMapperCore(object):
             if default is not None:
                 return default
             else:
-                raise KeyError
+                raise KeyError(k)
         
     def test_get_metadata(self):
         from Mapper import Mapper
@@ -78,6 +78,7 @@ class TestMappingTwo(unittest.TestCase, TestMapperCore):
         u'meta:aspect_ratio'               : "16x9",
         u'meta:durationSeconds'            : 123.45,
         u'meta:itemId'                     : "KP-123456",
+        u'movie:format'                    : "mp4",
         u'movie:size'                      : 234125,
         u'movie:extension'                 : "mp4",
         u'track:vide:height'               : "720",
@@ -88,7 +89,7 @@ class TestMappingTwo(unittest.TestCase, TestMapperCore):
         u'meta:cdn_url'                    : "http://path/to/rendition.mp4",
         u'track:vide:h264_settings_bitrate': "768000",
         u'track:vide:codec'                : "h264",
-        u'__version'                       : "2"
+        u'meta:__version'                  : "2"
     }
     
     TESTMAPPED = {u'abitrate'    : 128.0,
@@ -105,7 +106,7 @@ class TestMappingTwo(unittest.TestCase, TestMapperCore):
                   u'octopus_id'  : '23455',
                   u'url'         : 'http://path/to/rendition.mp4',
                   u'vbitrate'    : 768.0,
-                  u'vcodec'      : 'h264'
+                  u'vcodec'      : 'h264',
                   }
 
 
