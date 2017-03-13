@@ -15,6 +15,27 @@ class Database(object):
     FILENAME_FIELDS = ['filename','originalFilename']
     CHOPPER = re.compile(r'\.[^\.]+$')
     
+    SCHEMA_COLUMNS = [
+        "encodingid",
+        "contentid",
+        "url",
+        "format",
+        "mobile",
+        "multirate",
+        "vcodec",
+        "acodec",
+        "vbitrate",
+        "abitrate",
+        "lastupdate",
+        "frame_width",
+        "frame_height",
+        "duration",
+        "file_size",
+        "fcs_id",
+        "octopus_id",
+        "aspect"
+    ]
+    
     def __init__(self,config=None,make_connection=True):
         self._conn = None
         if(make_connection): self.do_connect(config)
@@ -91,17 +112,19 @@ class Database(object):
         try:
             return self._find_in_database(filename)
         except NotFound:
-            return self._make_new_record(filename,meta['octopus ID'],meta['project_name'])
+            return self._make_new_record(filename,meta['octopus_id'],meta.get('project', "(no project)"))
     
     def _get_sqlargs(self,meta):
         fields = []
         placeholders = []
         values = []
         for k,v in meta.items():
-            fields.append(k)
-            placeholders.append("%s")
-            values.append(v)
-            
+            if k in self.SCHEMA_COLUMNS:
+                fields.append(k)
+                placeholders.append("%s")
+                values.append(v)
+            else:
+                logging.warning("Database::_get_sqlargs - column {0} does not exist in the database.".format(k))
         return (fields, placeholders, values)
     
     def add_encoding(self,contentid,meta):

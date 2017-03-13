@@ -3,6 +3,7 @@ class NoMappingFound(StandardError):
 
 
 class Mapper(object):
+    #make sure that this list has the same number of entries as FIELD_MAPPINGS.
     FIELD_MULTIPLIERS = [
         {
             u'abitrate': 1,
@@ -11,11 +12,15 @@ class Mapper(object):
         {
             u'abitrate': 0.001,
             u'vbitrate': 0.001
+        },
+        {
+            u'abitrate': 1,
+            u'vbitrate': 1
         }
     ]
     
     FIELD_MAPPINGS = [
-        {
+        {   #old-skool mapping
             u'abitrate'    : u'track:audi:bitrate',
             u'acodec'      : u'track:audi:format',
             u'aspect'      : u'meta:aspect_ratio',
@@ -30,11 +35,12 @@ class Mapper(object):
             u'octopus_id'  : u'meta:octopus ID',
             u'url'         : u'meta:cdn_url',
             u'vbitrate'    : u'track:vide:bitrate',
-            u'vcodec'      : u'track:vide:format'
+            u'vcodec'      : u'track:vide:format',
+            u'filename'    : u'filename'
         },
-        {
-            u'abitrate'    : u'tracks:audi:aac_settings_bitrate',
-            u'acodec'      : u'tracks:audi:codec',
+        {   #Elemental encoder mapping
+            u'abitrate'    : u'track:audi:aac_settings_bitrate',
+            u'acodec'      : u'track:audi:codec',
             u'aspect'      : u'meta:aspect_ratio',
             u'duration'    : u'meta:durationSeconds',
             u'fcs_id'      : u'meta:itemId',
@@ -47,7 +53,28 @@ class Mapper(object):
             u'octopus_id'  : u'meta:gnm_master_generic_titleid',
             u'url'         : u'meta:cdn_url',
             u'vbitrate'    : u'track:vide:h264_settings_bitrate',
-            u'vcodec'      : u'track:vide:codec'
+            u'vcodec'      : u'track:vide:codec',
+            u'originalFilename': u'originalFilename',
+            u'project': u'__collection'
+        },
+        {   #Elastic Transcoder mapping
+            u'abitrate'        : u'track:audi:bitrate',
+            u'acodec'          : u'track:audi:format',
+            u'aspect'          : u'meta:aspect_ratio',
+            u'duration'        : u'meta:durationSeconds',
+            u'fcs_id'          : u'meta:itemId',
+            u'file_size'       : u'movie:size',
+            u'format'          : u'movie:extension',
+            u'frame_height'    : u'track:vide:height',
+            u'frame_width'     : u'track:vide:width',
+            u'mobile'          : u'meta:for_mobile',
+            u'multirate'       : u'meta:is_multirate',
+            u'octopus_id'      : u'meta:gnm_master_generic_titleid',
+            u'url'             : u'meta:cdn_url',
+            u'vbitrate'        : u'track:vide:bitrate',
+            u'vcodec'          : u'track:vide:format',
+            u'originalFilename': u'originalFilename',
+            u'project': u'__collection'
         }
     ]
 

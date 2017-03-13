@@ -28,3 +28,9 @@ class Parser(object):
             else:
                 return default
         return elem.get('value')
+    
+    def dump(self):
+        from bs4 import BeautifulSoup
+        
+        print BeautifulSoup(ET.tostring(self._data), "xml").prettify(encoding="UTF-8")
+        

@@ -4,6 +4,20 @@ import os
 from mock import MagicMock
 
 
+class TestRealData(unittest.TestCase):
+    def test_realdata_elastic(self):
+        from Parser import Parser
+        from Mapper import Mapper
+        from pprint import pprint
+        
+        with open(os.path.join(os.path.dirname(__file__),'testdata/realdata_elastic.xml')) as f:
+            p = Parser(f.read())
+            
+        m = Mapper()
+        mapped_data = m.map_metadata(p)
+        
+        pprint(mapped_data)
+        
 class TestMapperCore(object):
     """
     Mixin class that implements the actual test methods
@@ -49,7 +63,8 @@ class TestMappingOne(unittest.TestCase, TestMapperCore):
         u'meta:octopus ID'   : "12345678",
         u'meta:cdn_url'      : "http://path/to/rendition.mp4",
         u'track:vide:bitrate': "768",
-        u'track:vide:format' : "h264"
+        u'track:vide:format' : "h264",
+        u'filename': "some_filename.mxf"
     }
     
     TESTMAPPED = {
@@ -67,14 +82,15 @@ class TestMappingOne(unittest.TestCase, TestMapperCore):
         u'octopus_id'  : '12345678',
         u'url'         : 'http://path/to/rendition.mp4',
         u'vbitrate'    : 768.0,
-        u'vcodec'      : 'h264'
+        u'vcodec'      : 'h264',
+        u'filename': "some_filename.mxf"
     }
 
 
 class TestMappingTwo(unittest.TestCase, TestMapperCore):
     TESTDATA = {
-        u'tracks:audi:aac_settings_bitrate': "128000",
-        u'tracks:audi:codec'               : "aac",
+        u'track:audi:aac_settings_bitrate': "128000",
+        u'track:audi:codec'               : "aac",
         u'meta:aspect_ratio'               : "16x9",
         u'meta:durationSeconds'            : 123.45,
         u'meta:itemId'                     : "KP-123456-1",
@@ -87,7 +103,9 @@ class TestMappingTwo(unittest.TestCase, TestMapperCore):
         u'meta:gnm_master_generic_titleid' : "23455",
         u'meta:cdn_url'                    : "http://path/to/rendition.mp4",
         u'track:vide:h264_settings_bitrate': "768000",
-        u'track:vide:codec'                : "h264"
+        u'track:vide:codec'                : "h264",
+        u'originalFilename': "some_filename.mxf",
+        u'__collection': "VX-1234"
     }
     
     TESTMAPPED = {u'abitrate'    : 128.0,
@@ -104,7 +122,9 @@ class TestMappingTwo(unittest.TestCase, TestMapperCore):
                   u'octopus_id'  : '23455',
                   u'url'         : 'http://path/to/rendition.mp4',
                   u'vbitrate'    : 768.0,
-                  u'vcodec'      : 'h264'
+                  u'vcodec'      : 'h264',
+                  u'originalFilename': "some_filename.mxf",
+                  u'project': "VX-1234"
                   }
 
 
@@ -122,7 +142,8 @@ class TestMappingIncomplete(unittest.TestCase, TestMapperCore):
         u'meta:octopus ID'   : "12345678",
         u'meta:cdn_url'      : "http://path/to/rendition.mp4",
         u'track:vide:bitrate': "768",
-        u'track:vide:format' : "h264"
+        u'track:vide:format' : "h264",
+        u'filename': "rendition.mxf"
     }
     
     TESTMAPPED = {
@@ -140,5 +161,6 @@ class TestMappingIncomplete(unittest.TestCase, TestMapperCore):
         u'octopus_id'  : '12345678',
         u'url'         : 'http://path/to/rendition.mp4',
         u'vbitrate'    : 768.0,
-        u'vcodec'      : 'h264'
+        u'vcodec'      : 'h264',
+        u'filename': "rendition.mxf"
     }
