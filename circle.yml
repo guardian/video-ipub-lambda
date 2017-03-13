@@ -12,8 +12,6 @@ dependencies:
     - curl http://cdn.mysql.com/Downloads/Connector-Python/mysql-connector-python-2.1.4.tar.gz > /tmp/mysql-connector-python-2.1.4.tar.gz
     - cd /tmp; tar xvzf mysql-connector-python-2.1.4.tar.gz
     - cd /tmp/mysql-connector-python-2.1.4; python ./setup.py install
-  cache_directories:
-    - "/opt/circleci/.pyenv/versions/2.7.9/lib"
 
 database:
   override:
