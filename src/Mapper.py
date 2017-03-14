@@ -59,6 +59,7 @@ class Mapper(object):
             u'vbitrate'    : BaseMapping(u'track:vide:h264_settings_bitrate'),
             u'vcodec'      : BaseMapping(u'track:vide:codec'),
             u'filename':  BaseMapping(u'originalFilename'),
+            u'originalFilename': BaseMapping(u'originalFilename'),
             u'project':   BaseMapping(u'gnm_master_interactive_projectref')
         },
         {   #Elastic Transcoder mapping
