@@ -150,6 +150,7 @@ class TestMappingTwo(unittest.TestCase, TestMapperCore):
                   u'vbitrate'    : 768.0,
                   u'vcodec'      : 'h264',
                   u'filename': "some_filename.mxf",
+                  u'originalFilename': "some_filename.mxf",
                   u'project': "VX-1234"
                   }
 
