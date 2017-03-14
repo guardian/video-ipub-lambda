@@ -9,6 +9,17 @@ class TestDatabase(unittest.TestCase):
         super(TestDatabase,self).__init__(*args,**kwargs)
         self._cached_id = None
         
+    def test_remove_extension(self):
+        from Database import Database
+        str = "filename.xyz"
+        self.assertEqual(Database._remove_extension(str),"filename")
+        
+        str = "barefilename"
+        self.assertEqual(Database._remove_extension(str),"barefilename")
+        
+        str = "/path/to/filename.xyz"
+        self.assertEqual(Database._remove_extension(str), "/path/to/filename")
+        
     def test_get_filename(self):
         from Database import Database
         

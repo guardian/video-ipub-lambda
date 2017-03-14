@@ -7,6 +7,7 @@ class NoMappingFound(StandardError):
 
 
 class Mapper(object):
+    #make sure that this list has the same number of entries as FIELD_MAPPINGS.
     FIELD_MULTIPLIERS = [
         {
             u'abitrate': 1,
@@ -15,6 +16,10 @@ class Mapper(object):
         {
             u'abitrate': 0.001,
             u'vbitrate': 0.001
+        },
+        {
+            u'abitrate': 1,
+            u'vbitrate': 1
         }
     ]
     
@@ -34,11 +39,12 @@ class Mapper(object):
             u'octopus_id'  : BaseMapping(u'meta:octopus ID'),
             u'url'         : BaseMapping(u'meta:cdn_url'),
             u'vbitrate'    : BaseMapping(u'track:vide:bitrate'),
-            u'vcodec'      : BaseMapping(u'track:vide:format')
+            u'vcodec'      : BaseMapping(u'track:vide:format'),
+            u'filename': BaseMapping(u'filename')
         },
         {
-            u'abitrate'    : BaseMapping(u'tracks:audi:aac_settings_bitrate'),
-            u'acodec'      : BaseMapping(u'tracks:audi:codec'),
+            u'abitrate'    : BaseMapping(u'track:audi:aac_settings_bitrate'),
+            u'acodec'      : BaseMapping(u'track:audi:codec'),
             u'aspect'      : BaseMapping(u'meta:aspect_ratio'),
             u'duration'    : BaseMapping(u'meta:durationSeconds'),
             u'fcs_id'      : JoinMapping(u'meta:itemId',u'meta:__version'),
@@ -51,7 +57,28 @@ class Mapper(object):
             u'octopus_id'  : BaseMapping(u'meta:gnm_master_generic_titleid'),
             u'url'         : BaseMapping(u'meta:cdn_url'),
             u'vbitrate'    : BaseMapping(u'track:vide:h264_settings_bitrate'),
-            u'vcodec'      : BaseMapping(u'track:vide:codec')
+            u'vcodec'      : BaseMapping(u'track:vide:codec'),
+            u'filename':  BaseMapping(u'originalFilename'),
+            u'project':   BaseMapping(u'gnm_master_interactive_projectref')
+        },
+        {   #Elastic Transcoder mapping
+            u'abitrate'        : BaseMapping(u'track:audi:bitrate'),
+            u'acodec'          : BaseMapping(u'track:audi:format'),
+            u'aspect'          : BaseMapping(u'meta:aspect_ratio'),
+            u'duration'        : BaseMapping(u'meta:durationSeconds'),
+            u'fcs_id'          : JoinMapping(u'meta:itemId',u'meta:__version'),
+            u'file_size'       : BaseMapping(u'movie:size'),
+            u'format'          : BaseMapping(u'movie:extension'),
+            u'frame_height'    : BaseMapping(u'track:vide:height'),
+            u'frame_width'     : BaseMapping(u'track:vide:width'),
+            u'mobile'          : BaseMapping(u'meta:for_mobile'),
+            u'multirate'       : BaseMapping(u'meta:is_multirate'),
+            u'octopus_id'      : BaseMapping(u'meta:gnm_master_generic_titleid'),
+            u'url'             : BaseMapping(u'meta:cdn_url'),
+            u'vbitrate'        : BaseMapping(u'track:vide:bitrate'),
+            u'vcodec'          : BaseMapping(u'track:vide:format'),
+            u'originalFilename': BaseMapping(u'originalFilename'),
+            u'project'         : BaseMapping(u'gnm_master_interactive_projectref')
         }
     ]
 

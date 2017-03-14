@@ -1,0 +1,282 @@
+<?xml version="1.0"?>
+<!DOCTYPE meta-data SYSTEM "meta.dtd">
+<meta-data version="1.0">
+ <meta name="meta-source" value="inmeta">
+ <meta name="format_path" value="mainwebsite"/>
+ <meta name="upload_bucket" value="gnm-multimedia-cdn"/>
+ <meta name="fastly_surrogate_key" value="BK-16470_mp4"/>
+ <meta name="cdn_url" value="http://cdn.theguardian.tv/mainwebsite/2017/03/10/170310YusufDRTest2_h264_publish.mp4"/>
+ <meta name="cdn_path" value="mainwebsite/2017/03/10"/>
+ <meta name="url_prepend" value=""/>
+ <meta name="r2_format" value="video/mp4"/>
+ <meta name="format_modifier" value="[value not present]"/>
+ <meta name="FCS asset ID" value="BK-16470-1"/>
+ <meta name="octopus ID" value="12038722"/>
+ <meta name="output_trigger_file" value="/srv/projectfiles/Watchers/supplementary_encodings/trigger/12038722.trg"/>
+ <meta name="loggingid" value="1C1EE91A-058D-11E7-BDC1-A37C5122A8AF"/>
+ <meta name="gnm_master_spotify_title" value=""/>
+ <meta name="gnm_asset_owner" value="7"/>
+ <meta name="gnm_call_to_action_link_description" value=""/>
+ <meta name="gnm_master_mainstreamsyndication_title" value="170310DailyTest2"/>
+ <meta name="gnm_master_dailymotion_uploadtype" value="New"/>
+ <meta name="__storage" value="BK-12"/>
+ <meta name="gnm_asset_description" value=""/>
+ <meta name="gnm_master_mainstreamsyndication_keywords" value=""/>
+ <meta name="gnm_master_website_edit_url" value="https://composer.gutools.co.uk/content/58c29b4ee4b00bd41ba508d6"/>
+ <meta name="gnm_master_spotify_publish" value=""/>
+ <meta name="gnm_mastermediawall_publication_time" value=""/>
+ <meta name="gnm_master_interactive_publish" value=""/>
+ <meta name="gnm_master_facebook_title" value=""/>
+ <meta name="gnm_master_generic_production_office" value="UK"/>
+ <meta name="__storage_h264_publish" value="BK-3"/>
+ <meta name="gnm_master_mainstreamsyndication_uploadstatus" value="Not Ready"/>
+ <meta name="gnm_master_facebook_status" value="Draft"/>
+ <meta name="gnm_master_youtube_uploadstatus" value="Not Ready"/>
+ <meta name="originalUri" value="s3://gnm-multimedia-eu-upload/uploads/pluto_indirect/170310YusufDRTest2.mxf"/>
+ <meta name="gnm_asset_status" value=""/>
+ <meta name="gnm_master_dailymotion_publish" value=""/>
+ <meta name="durationSeconds" value="5.04"/>
+ <meta name="gnm_master_youtube_category" value="44"/>
+ <meta name="originalHeight" value="1080"/>
+ <meta name="gnm_master_interactive_holdingimage_16x9" value=""/>
+ <meta name="gnm_master_youtube_license" value="youtube"/>
+ <meta name="gnm_master_dailymotion_description" value=""/>
+ <meta name="gnm_project_headline" value="170104DailyTest"/>
+ <meta name="__metadata_last_modified" value="2017-03-10T12:28:32.597Z"/>
+ <meta name="__storage_h264_publish_size" value="1"/>
+ <meta name="gnm_master_website_uploadstatus" value="Ready to Upload"/>
+ <meta name="gnm_master_facebook_backdated_time" value=""/>
+ <meta name="gnm_asset_keywords" value="32240"/>
+ <meta name="gnm_master_youtube_allowratings" value="allow_ratings"/>
+ <meta name="gnm_master_dailymotion_uploadstatus" value="Not Ready"/>
+ <meta name="gnm_mastermediawall_uploadstatus" value="Not Ready"/>
+ <meta name="gnm_call_to_action_offer_id" value=""/>
+ <meta name="gnm_type" value="Master"/>
+ <meta name="gnm_asset_fee_notes" value=""/>
+ <meta name="gnm_mastermediawall_output_filename" value=""/>
+ <meta name="gnm_asset_createdby" value="7"/>
+ <meta name="__sequence_size" value="0"/>
+ <meta name="gnm_master_mainstreamsyndication_uploadlog" value=""/>
+ <meta name="gnm_master_youtube_description" value=""/>
+ <meta name="gnm_master_youtube_publish" value=""/>
+ <meta name="gnm_asset_user_keywords" value=""/>
+ <meta name="gnm_master_interactive_title" value="170310DailyTest2"/>
+ <meta name="gnm_mastermediawall_uploadlog" value=""/>
+ <meta name="gnm_master_interactive_status" value="Draft"/>
+ <meta name="gnm_master_interactive_remove" value=""/>
+ <meta name="gnm_master_website_primary_tone" value="22641"/>
+ <meta name="gnm_master_mainstreamsyndication_owner" value=""/>
+ <meta name="__storage_size" value="2"/>
+ <meta name="gnm_master_youtube_status" value="Draft"/>
+ <meta name="gnm_master_facebook_target" value="695569423877882"/>
+ <meta name="gnm_master_mainstreamsyndication_author" value="7"/>
+ <meta name="gnm_master_dailymotion_keywords" value=""/>
+ <meta name="__storage_h264_mezzanine" value="BK-3"/>
+ <meta name="gnm_commission_workinggroup" value="c55208df-7d4b-4e05-88db-c9cc422818bc"/>
+ <meta name="gnm_master_mainstreamsyndication_aol_master_category" value=""/>
+ <meta name="gnm_master_facebook_id" value=""/>
+ <meta name="gnm_master_mainstreamsyndication_description" value=""/>
+ <meta name="gnm_commission_title" value="170103WeeklyTest"/>
+ <meta name="shapeTag" value="h264_publish|h264_mezzanine|original|lowres|"/>
+ <meta name="gnm_master_youtube_uploadlog" value=""/>
+ <meta name="gnm_master_dailymotion_holdingimage" value=""/>
+ <meta name="__version_count" value="2"/>
+ <meta name="gnm_storage_rule_projects_completed" value=""/>
+ <meta name="gnm_master_interactive_uploadlog" value=""/>
+ <meta name="gnm_call_to_action_link_title" value=""/>
+ <meta name="gnm_mm_provider" value=""/>
+ <meta name="originalVideoCodec" value="h264"/>
+ <meta name="gnm_master_licensor" value="Guardian News And Media"/>
+ <meta name="gnm_master_mainstreamsyndication_remove" value=""/>
+ <meta name="originalFormat" value="mxf"/>
+ <meta name="gnm_master_website_uploadlog" value="12:26:09 Upload Succeeded 12:25:52 Composer page created 12:25:47 Images uploaded to Composer 12:25:21 Acquired video media and PLUTO holding images 12:24:48 Acquiring media... "/>
+ <meta name="representativeThumbnailNoAuth" value="/APInoauth/thumbnail/BK-2/BK-16470;version=1/0@PAL?hash=2596fd5898f5c219e31556094d0f4456"/>
+ <meta name="__storagegroup_size" value="1"/>
+ <meta name="__ancestor_collection" value="BK-746"/>
+ <meta name="gnm_master_website_headline" value="170310DailyTest2"/>
+ <meta name="gnm_master_mediaatom_uploadstatus" value="Not Ready"/>
+ <meta name="gnm_master_mainstreamsyndication_status" value="Draft"/>
+ <meta name="gnm_asset_restrictions_apply" value=""/>
+ <meta name="gnm_master_website_trail" value="170103WeeklyTest"/>
+ <meta name="gnm_master_generic_holdingimage_16x9" value=""/>
+ <meta name="gnm_user_skipped_edl_upload" value="false"/>
+ <meta name="__shape_last_added" value="2017-03-10T12:25:05.262Z"/>
+ <meta name="gnm_mm_ref" value=""/>
+ <meta name="gnm_master_spotify_title_id" value="GMBK16470000000000000000"/>
+ <meta name="__storage_lowres_size" value="1"/>
+ <meta name="originalAudioCodec" value="pcm_s24le"/>
+ <meta name="gnm_mm_caption" value=""/>
+ <meta name="gnm_master_dailymotion_holdingimage_16x9" value=""/>
+ <meta name="mediaType" value="video"/>
+ <meta name="created" value="2017-03-10T12:21:42.218Z"/>
+ <meta name="gnm_master_mediaatom_uploadlog" value=""/>
+ <meta name="__version" value="1"/>
+ <meta name="gnm_call_to_action_product_link" value=""/>
+ <meta name="__storage_original" value="BK-3"/>
+ <meta name="gnm_master_youtube_youtubeurl" value=""/>
+ <meta name="gnm_mm_headline" value=""/>
+ <meta name="gnm_call_to_action_page_id" value=""/>
+ <meta name="gnm_asset_category" value="Master"/>
+ <meta name="gnm_master_spotify_uploadstatus" value="Not Ready"/>
+ <meta name="gnm_master_dailymotion_title" value="170310DailyTest2"/>
+ <meta name="__shape_size" value="5"/>
+ <meta name="gnm_master_interactive_projectref" value="BK-748"/>
+ <meta name="__shapetag_h264_mezzanine_hash" value="f3cb4a1d42a0e46e4f40ae2c36e3067a3c87e08c"/>
+ <meta name="gnm_master_youtube_channelid" value="UCHpw8xwDNhU9gdohEcJu4aA"/>
+ <meta name="gnm_master_language" value="en"/>
+ <meta name="gnm_master_facebook_description" value=""/>
+ <meta name="gnm_master_generic_source" value="guardian.co.uk"/>
+ <meta name="gnm_storage_rule_deletable" value="storage_rule_deletable"/>
+ <meta name="gnm_master_facebook_uploadlog" value=""/>
+ <meta name="gnm_master_spotify_uploadlog" value=""/>
+ <meta name="gnm_master_website_byline" value=""/>
+ <meta name="gnm_master_spotify_keywords" value=""/>
+ <meta name="gnm_master_youtube_holdingimage_16x9" value=""/>
+ <meta name="gnm_mm_copyright" value=""/>
+ <meta name="gnm_master_facebook_backdate_accuracy" value="None"/>
+ <meta name="__storage_lowres" value="BK-12"/>
+ <meta name="gnm_master_facebook_holdingimage_16x9" value=""/>
+ <meta name="gnm_master_youtube_notify_channel_subscribers" value="notify_channel_subscribers"/>
+ <meta name="gnm_master_youtube_uploadtype" value="New"/>
+ <meta name="gnm_asset_filename" value=""/>
+ <meta name="gnm_master_youtube_allowembedding" value="allow_embedding"/>
+ <meta name="gnm_asset_restrictions_notes" value=""/>
+ <meta name="gnm_master_mainstreamsyndication_aol_subcategory" value=""/>
+ <meta name="startTimeCode" value="899250@PAL"/>
+ <meta name="portal_essence_version" value="1"/>
+ <meta name="gnm_master_youtube_title" value="170310DailyTest2"/>
+ <meta name="gnm_master_youtube_embeddable" value="embeddable"/>
+ <meta name="representativeThumbnail" value="/API/thumbnail/BK-2/BK-16470;version=1/0@PAL"/>
+ <meta name="gnm_master_spotify_licensor" value="Guardian News And Media"/>
+ <meta name="__shapetag_original_hash" value="8a18a6764d89b3f700ed5cd48eca8e2bcfbc440b"/>
+ <meta name="user" value="yusuf_parkar"/>
+ <meta name="gnm_master_facebook_holdingimage" value=""/>
+ <meta name="gnm_master_youtube_owner" value=""/>
+ <meta name="__storage_original_size" value="1"/>
+ <meta name="__placeholder_shape_size" value="1"/>
+ <meta name="gnm_master_mainstreamsyndication_holdingimage_16x9" value=""/>
+ <meta name="__ancestor_collection_size" value="2"/>
+ <meta name="gnm_call_to_action_type" value="NO_BUTTON"/>
+ <meta name="original_mimetype" value="video/x-mxf-h264-pcm_s24le"/>
+ <meta name="gnm_master_generic_titleid" value="12038722"/>
+ <meta name="gnm_call_to_action_sponsor_link" value=""/>
+ <meta name="originalFilename" value="170310YusufDRTest2.mxf"/>
+ <meta name="gnm_master_mainstreamsyndication_holdingimage" value=""/>
+ <meta name="gnm_call_to_action_app_link" value=""/>
+ <meta name="gnm_master_dailymotion_uploadlog" value=""/>
+ <meta name="gnm_call_to_action_link_caption" value=""/>
+ <meta name="gnm_master_pacdata_status" value="missing"/>
+ <meta name="gnm_master_generic_remove" value=""/>
+ <meta name="gnm_master_facebook_schedule_publish_time" value=""/>
+ <meta name="gnm_mastermediawall_status" value="Draft"/>
+ <meta name="durationTimeCode" value="5040000@1000000"/>
+ <meta name="gnm_master_youtube_keywords" value=""/>
+ <meta name="gnm_asset_file_last_modified" value=""/>
+ <meta name="gnm_job_id" value="BK-119027"/>
+ <meta name="__storage_h264_mezzanine_size" value="1"/>
+ <meta name="gnm_storage_rule_projects_held" value=""/>
+ <meta name="gnm_master_mainstreamsyndication_publish" value=""/>
+ <meta name="gnm_master_interactive_owner" value=""/>
+ <meta name="__shapetag_h264_publish_hash" value="b5f1705ffd99a17f6717645d8ebfd9b7acaf5e85"/>
+ <meta name="__storagegroup" value="Proxies"/>
+ <meta name="gnm_storage_rule_deep_archive" value="storage_rule_deep_archive"/>
+ <meta name="gnm_master_facebook_upload_as" value=""/>
+ <meta name="__collection_size" value="1"/>
+ <meta name="gnm_asset_filming_location" value=""/>
+ <meta name="gnm_master_dailymotion_owner" value=""/>
+ <meta name="gnm_asset_file_created" value=""/>
+ <meta name="startSeconds" value="35970.0"/>
+ <meta name="gnm_master_youtube_remove" value=""/>
+ <meta name="gnm_call_to_action_link" value=""/>
+ <meta name="gnm_master_spotify_status" value="Draft"/>
+ <meta name="gnm_master_dailymotion_author" value="7"/>
+ <meta name="gnm_master_spotify_upload_version" value=""/>
+ <meta name="title" value="170310DailyTest2"/>
+ <meta name="__shapetag_lowres_hash" value="c4bd5fa5bb7e938f1fbd770058050a51dba0bbe2"/>
+ <meta name="gnm_master_generic_status" value="Ready to Publish"/>
+ <meta name="gnm_mm_photographer" value=""/>
+ <meta name="gnm_master_mediaatom_status" value="Draft"/>
+ <meta name="itemId" value="BK-16470"/>
+ <meta name="gnm_master_interactive_uploadstatus" value="Not Ready"/>
+ <meta name="gnm_master_generic_uploadtype" value="Update"/>
+ <meta name="gnm_storage_rule_sensitive" value=""/>
+ <meta name="gnm_master_generic_publish" value=""/>
+ <meta name="gnm_master_dailymotion_dailymotionurl" value=""/>
+ <meta name="gnm_master_youtube_allowcomments" value="allow_comments"/>
+ <meta name="gnm_master_youtube_holdingimage" value=""/>
+ <meta name="__shape" value="BK-34644"/>
+ <meta name="portal_ingested" value="2017-03-10T12:22:35.867Z"/>
+ <meta name="__collection" value="BK-748"/>
+ <meta name="gnm_master_mediaatom_atomid" value=""/>
+ <meta name="originalWidth" value="1920"/>
+ <meta name="gnm_call_to_action_sponsor_image_url" value=""/>
+ <meta name="gnm_call_to_action_application" value=""/>
+ <meta name="gnm_master_youtube_allowresponses" value="allow_responses"/>
+ <meta name="gnm_master_website_standfirst" value=""/>
+ <meta name="gnm_master_dailymotion_dailymotioncategory" value="animals"/>
+ <meta name="gnm_master_facebook_uploadstatus" value="Not Ready"/>
+ <meta name="gnm_master_spotify_description" value=""/>
+ <meta name="gnm_master_dailymotion_status" value="Draft"/>
+ <meta name="gnm_master_spotify_id" value="GEBK16470000000000000000"/>
+ </meta>
+ <meta name="movie" value="%2Fsrv%2FMultimediaScratch%2FScratch">
+ <meta name="size" value="790014"/>
+ <meta name="mimetype" value="video/mp4"/>
+ <meta name="streams_count" value="3"/>
+ <meta name="start_time" value="0.000000"/>
+ <meta name="format_description" value="QuickTime / MOV"/>
+ <meta name="bitrate" value="1224.599609375"/>
+ <meta name="format" value=".mov"/>
+ <meta name="duration" value="5.120000"/>
+ <meta name="extension" value="mp4"/>
+ <meta name="filename" value="170310YusufDRTest2_h264_publish.mp4"/>
+ <meta name="escaped_path" value="%2Fsrv%2FMultimediaScratch%2FScratch"/>
+ <meta name="path" value="/srv/MultimediaScratch/Scratch"/>
+ </meta>
+ <meta name="track" value="1">
+ <meta name="start" value="0.000000"/>
+ <meta name="profile_name" value="unknown"/>
+ <meta name="format_description" value="AAC (Advanced Audio Coding)"/>
+ <meta name="type" value="audi"/>
+ <meta name="format" value="AAC (Advanced Audio Coding)"/>
+ <meta name="framerate" value="0/0"/>
+ <meta name="bitspersample" value="0"/>
+ <meta name="duration" value="5.120000"/>
+ <meta name="samplerate" value="48000"/>
+ <meta name="language_tag" value="und"/>
+ <meta name="channels" value="2"/>
+ <meta name="bitrate" value="122.78125"/>
+ <meta name="index" value="1"/>
+ </meta>
+ <meta name="track" value="2">
+ <meta name="start" value="0.000000"/>
+ <meta name="profile_name" value="Baseline"/>
+ <meta name="format_description" value="H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10"/>
+ <meta name="has_b_frames" value="0"/>
+ <meta name="type" value="vide"/>
+ <meta name="sample_aspect" value="1:1"/>
+ <meta name="format" value="H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10"/>
+ <meta name="codec_level" value="30"/>
+ <meta name="pixel_format" value="yuv420p"/>
+ <meta name="framerate" value="25/1"/>
+ <meta name="height" value="360"/>
+ <meta name="duration" value="5.040000"/>
+ <meta name="aspect" value="16:9"/>
+ <meta name="language_tag" value="und"/>
+ <meta name="bitrate" value="1076.6474609375"/>
+ <meta name="width" value="640"/>
+ <meta name="index" value="2"/>
+ </meta>
+ <meta name="track" value="3">
+ <meta name="format_description" value="unknown"/>
+ <meta name="start" value="0.000000"/>
+ <meta name="profile_name" value="unknown"/>
+ <meta name="type" value="data"/>
+ <meta name="format" value="unknown"/>
+ <meta name="framerate" value="0/0"/>
+ <meta name="duration" value="5.040000"/>
+ <meta name="language_tag" value="eng"/>
+ <meta name="bitrate" value="0.005859375"/>
+ <meta name="index" value="3"/>
+ </meta>
+</meta-data>

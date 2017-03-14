@@ -17,6 +17,7 @@ class TestParser(unittest.TestCase):
         path = os.path.join(os.path.dirname(__file__),"testdata/160615ClericInterview.meta.xml")
         with open(path) as f:
             p = Parser(f.read())
+        self.assertEqual(p.get('originalFilename'), '160615ClericInterview.mov')
         self.assertEqual(p.get('gnm_master_website_headline'),"150616 Clare Aus")
         self.assertEqual(p.get('meta:gnm_master_website_headline'), "150616 Clare Aus")
         self.assertEqual(p.get('movie:container'), "mp4")
