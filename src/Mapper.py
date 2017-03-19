@@ -1,6 +1,6 @@
 from BaseMapping import BaseMapping
 from JoinMapping import JoinMapping
-
+from FormatMapping import FormatMapping
 
 class NoMappingFound(StandardError):
     pass
@@ -31,7 +31,7 @@ class Mapper(object):
             u'duration'    : BaseMapping(u'movie:duration'),
             u'fcs_id'      : BaseMapping(u'meta:FCS asset ID'),
             u'file_size'   : BaseMapping(u'movie:size'),
-            u'format'      : BaseMapping(u'movie:format'),
+            u'format'      : FormatMapping(u'video/{0}',u'movie:format'),
             u'frame_height': BaseMapping(u'track:vide:height'),
             u'frame_width' : BaseMapping(u'track:vide:width'),
             u'mobile'      : BaseMapping(u'meta:for_mobile'),
@@ -49,7 +49,7 @@ class Mapper(object):
             u'duration'    : BaseMapping(u'meta:durationSeconds'),
             u'fcs_id'      : JoinMapping(u'meta:itemId',u'meta:__version'),
             u'file_size'   : BaseMapping(u'movie:size'),
-            u'format'      : BaseMapping(u'movie:extension'),
+            u'format'      : FormatMapping(u'video/{0}',u'movie:extension'),
             u'frame_height': BaseMapping(u'track:vide:height'),
             u'frame_width' : BaseMapping(u'track:vide:width'),
             u'mobile'      : BaseMapping(u'meta:for_mobile'),
@@ -69,7 +69,7 @@ class Mapper(object):
             u'duration'        : BaseMapping(u'meta:durationSeconds'),
             u'fcs_id'          : JoinMapping(u'meta:itemId',u'meta:__version'),
             u'file_size'       : BaseMapping(u'movie:size'),
-            u'format'          : BaseMapping(u'movie:extension'),
+            u'format'          : FormatMapping(u'video/{0}',u'movie:extension'),
             u'frame_height'    : BaseMapping(u'track:vide:height'),
             u'frame_width'     : BaseMapping(u'track:vide:width'),
             u'mobile'          : BaseMapping(u'meta:for_mobile'),

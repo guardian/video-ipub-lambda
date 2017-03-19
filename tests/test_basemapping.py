@@ -58,3 +58,31 @@ class TestJoinMapping(unittest.TestCase):
         
         m = JoinMapping('testkey','testotherkey', joinchar='-')
         self.assertEqual(m.evaluate(p), u"testvalue-testtwo")
+
+
+class TestFormatMapping(unittest.TestCase):
+    TESTDATA = {
+        u'testkey': u'testvalue',
+        u'testotherkey': u'testtwo'
+    }
+
+    TESTMAPPED = {}
+
+    def _return_datakey(self, k, default=None):
+        if k in self.TESTDATA:
+            return self.TESTDATA[k]
+        else:
+            if default is not None:
+                return default
+            else:
+                raise KeyError
+
+    def test_evaluate(self):
+        from FormatMapping import FormatMapping
+        from Parser import Parser
+
+        p = Parser("<?xml version=\"1.0\"?><meta-data></meta-data>")
+        p.get = MagicMock(side_effect=self._return_datakey)
+
+        m = FormatMapping('value_{0}_{key}', u'testkey', key=u'testotherkey')
+        self.assertEqual(m.evaluate(p), u"value_testvalue_testtwo")
