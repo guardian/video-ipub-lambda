@@ -157,6 +157,52 @@ class TestMappingTwo(unittest.TestCase, TestMapperCore):
                   }
 
 
+class TestMappingMIME(unittest.TestCase, TestMapperCore):
+    TESTDATA = {
+        u'track:audi:aac_settings_bitrate': "128000",
+        u'track:audi:codec': "aac",
+        u'meta:aspect_ratio': "16x9",
+        u'meta:durationSeconds': 123.45,
+        u'meta:itemId': "KP-123456",
+        u'movie:format': "m3u8",
+        u'movie:mimetype': "text/plain",
+        u'movie:size': 234125,
+        u'movie:extension': "mp4",
+        u'track:vide:height': "720",
+        u'track:vide:width': "1280",
+        u'meta:for_mobile': "0",
+        u'meta:is_multirate': "0",
+        u'meta:gnm_master_generic_titleid': "23455",
+        u'meta:cdn_url': "http://path/to/rendition.mp4",
+        u'track:vide:h264_settings_bitrate': "768000",
+        u'track:vide:codec': "h264",
+        u'meta:__version': "2",
+        u'originalFilename': "some_filename.mxf",
+        u'__collection': "VX-1234",
+        u'gnm_master_interactive_projectref': "VX-1234"
+    }
+
+    TESTMAPPED = {
+        u'abitrate': 128.0,
+        u'acodec': 'aac',
+        u'aspect': '16x9',
+        u'duration': 123.45,
+        u'fcs_id': u'KP-123456-2',
+        u'file_size': 234125,
+        u'format': 'video/m3u8',
+        u'frame_height': '720',
+        u'frame_width': '1280',
+        u'mobile': '0',
+        u'multirate': '0',
+        u'octopus_id': '23455',
+        u'url': 'http://path/to/rendition.mp4',
+        u'vbitrate': 768.0,
+        u'vcodec': 'h264',
+        u'filename': "some_filename.mxf",
+        u'originalFilename': "some_filename.mxf",
+        u'project': "VX-1234"
+    }
+
 class TestMappingIncomplete(unittest.TestCase, TestMapperCore):
     TESTDATA = {
         u'track:audi:bitrate': "128",

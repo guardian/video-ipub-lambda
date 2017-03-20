@@ -1,6 +1,6 @@
 from BaseMapping import BaseMapping
 from JoinMapping import JoinMapping
-
+from FormatMapping import MIMEFormatMapping
 
 class NoMappingFound(StandardError):
     pass
@@ -49,7 +49,7 @@ class Mapper(object):
             u'duration'    : BaseMapping(u'meta:durationSeconds'),
             u'fcs_id'      : JoinMapping(u'meta:itemId',u'meta:__version'),
             u'file_size'   : BaseMapping(u'movie:size'),
-            u'format'      : BaseMapping(u'movie:mimetype'),
+            u'format'      : MIMEFormatMapping(u'movie:mimetype',u'movie:format',prepend='video/'),
             u'frame_height': BaseMapping(u'track:vide:height'),
             u'frame_width' : BaseMapping(u'track:vide:width'),
             u'mobile'      : BaseMapping(u'meta:for_mobile'),
@@ -69,7 +69,7 @@ class Mapper(object):
             u'duration'        : BaseMapping(u'meta:durationSeconds'),
             u'fcs_id'          : JoinMapping(u'meta:itemId',u'meta:__version'),
             u'file_size'       : BaseMapping(u'movie:size'),
-            u'format'          : BaseMapping(u'movie:mimetype'),
+            u'format'          : MIMEFormatMapping(u'movie:mimetype',u'movie:format',prepend='video/'),
             u'frame_height'    : BaseMapping(u'track:vide:height'),
             u'frame_width'     : BaseMapping(u'track:vide:width'),
             u'mobile'          : BaseMapping(u'meta:for_mobile'),
