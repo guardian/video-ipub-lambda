@@ -1,0 +1,263 @@
+<?xml version="1.0"?>
+<!DOCTYPE meta-data SYSTEM "meta.dtd">
+<meta-data version="1.0">
+ <meta name="meta-source" value="inmeta">
+ <meta name="format_path" value="HLS"/>
+ <meta name="upload_bucket" value="gnm-multimedia-cdn"/>
+ <meta name="fastly_surrogate_key" value="KP-2537331_m3u8"/>
+ <meta name="cdn_url" value="https://cdn.theguardian.tv/HLS/2017/03/20/170320SH2.m3u8"/>
+ <meta name="cdn_path" value="HLS/2017/03/20"/>
+ <meta name="url_prepend" value=""/>
+ <meta name="r2_format" value="video/m3u8"/>
+ <meta name="format_modifier" value=":4m"/>
+ <meta name="loggingid" value="ABD4A518-0D58-11E7-8D34-DA5DB0354C31"/>
+ <meta name="gnm_asset_owner" value="323"/>
+ <meta name="output_trigger_file" value="/srv/projectfiles/Watchers/supplementary_encodings/trigger/12402419.trg"/>
+ <meta name="gnm_master_mainstreamsyndication_title" value="Stephen Hawking fears he may not be welcome in Trump&#x2019;s US &#x2013;&#xA0;video"/>
+ <meta name="__storage" value="KP-10"/>
+ <meta name="gnm_master_mainstreamsyndication_keywords" value="Donald Trump|Science|Stephen Hawking|News|US news|Environment|Climate change|Climate change|"/>
+ <meta name="gnm_asset_description" value="&lt;p&gt;Stephen Hawking says he fears he may not be welcome in the United States under the Trump administration. Speaking on ITV&#x2019;s Good Morning Britain on Monday, the eminent physician expressed his concern about Trump&#x2019;s climate change policy, adding that Scott Pruitt &#x2013; the head of Environmental Protection Agency, and climate change skeptic &#x2013; should be replaced &lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https://www.theguardian.com/science/2017/mar/20/stephen-hawking-trump-good-morning-britain-interview&quot;&gt;Stephen Hawking: I fear I may not be welcome in Donald Trump&#x2019;s US&lt;/a&gt;&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;"/>
+ <meta name="gnm_master_website_edit_url" value="https://composer.gutools.co.uk/content/58cf8ae7e4b01ea2330ba335"/>
+ <meta name="gnm_master_facebook_title" value="Stephen Hawking fears he may not be welcome in Trump&#x2019;s US &#x2013;&#xA0;video"/>
+ <meta name="gnm_master_generic_production_office" value="UK"/>
+ <meta name="gnm_master_mainstreamsyndication_uploadstatus" value="Do Not Send"/>
+ <meta name="gnm_asset_status" value=""/>
+ <meta name="gnm_master_youtube_uploadstatus" value="Do Not Send"/>
+ <meta name="originalUri" value="/srv/Multimedia2/Master Outputs/170320SH2.mxf"/>
+ <meta name="gnm_master_dailymotion_publish" value="2017-03-20"/>
+ <meta name="durationSeconds" value="39.96"/>
+ <meta name="gnm_mastergeneric_syndication_rule_applied" value="{&quot;status&quot;: &quot;ok&quot;, &quot;response&quot;: {&quot;mainstreamsyndication&quot;: &quot;forbid&quot;, &quot;dailymotion&quot;: &quot;forbid&quot;, &quot;guardianwebsite&quot;: &quot;allow&quot;, &quot;youtube&quot;: &quot;forbid&quot;, &quot;mediawall&quot;: &quot;forbid&quot;}, &quot;matched&quot;: {&quot;field&quot;: &quot;gnm_master_generic_source&quot;, &quot;value&quot;: &quot;ITV|Good Morning Britain|&quot;, &quot;rule&quot;: &quot;NOT gnm_master_generic_source eq guardian.co.uk priority 10&quot;}}"/>
+ <meta name="originalHeight" value="1080"/>
+ <meta name="gnm_master_dailymotion_description" value="&lt;p&gt;Stephen Hawking says he fears he may not be welcome in the United States under the Trump administration. Speaking on ITV&#x2019;s Good Morning Britain on Monday, the eminent physician expressed his concern about Trump&#x2019;s climate change policy, adding that Scott Pruitt &#x2013; the head of Environmental Protection Agency, and climate change skeptic &#x2013; should be replaced &lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https://www.theguardian.com/science/2017/mar/20/stephen-hawking-trump-good-morning-britain-interview&quot;&gt;Stephen Hawking: I fear I may not be welcome in Donald Trump&#x2019;s US&lt;/a&gt;&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;"/>
+ <meta name="__metadata_last_modified" value="2017-03-20T10:32:27.231Z"/>
+ <meta name="gnm_project_headline" value="200317 James B AM"/>
+ <meta name="gnm_master_website_uploadstatus" value="Ready to Upload"/>
+ <meta name="gnm_master_facebook_publish_video" value="master_facebook_publish"/>
+ <meta name="gnm_asset_keywords" value="66186|27399|14661|9444|65776|22641|13281|9046|"/>
+ <meta name="gnm_mastermainstreamsyndication_aol_subcategory" value="US"/>
+ <meta name="gnm_master_youtube_allowratings" value="allow_ratings"/>
+ <meta name="gnm_mastermediawall_uploadstatus" value="Do Not Send"/>
+ <meta name="gnm_master_dailymotion_uploadstatus" value="Do Not Send"/>
+ <meta name="gnm_type" value="Master"/>
+ <meta name="gnm_asset_fee_notes" value=""/>
+ <meta name="gnm_asset_createdby" value="323"/>
+ <meta name="__sequence_size" value="0"/>
+ <meta name="gnm_asset_user_keywords" value=""/>
+ <meta name="gnm_master_youtube_description" value="200317 James B AM"/>
+ <meta name="gnm_master_youtube_publish" value="2017-03-20"/>
+ <meta name="gnm_master_interactive_title" value="Hawking"/>
+ <meta name="gnm_master_website_primary_tone" value="22641"/>
+ <meta name="__storage_size" value="2"/>
+ <meta name="gnm_master_website_r2_options" value="hide_adverts|embeddable|"/>
+ <meta name="FCS asset ID" value="KP-2537331-2"/>
+ <meta name="gnm_master_facebook_target" value="10513336322"/>
+ <meta name="__storage_WebM_size" value="1"/>
+ <meta name="gnm_master_mainstreamsyndication_author" value="323"/>
+ <meta name="gnm_master_dailymotion_keywords" value="Stephen Hawking|US news|Environment|News|Science|Donald Trump|Climate change|Climate change|"/>
+ <meta name="__storage_h264_mezzanine" value="KP-16"/>
+ <meta name="gnm_commission_workinggroup" value="1b97c363-fba0-4771-9cb5-9bd65aaed306"/>
+ <meta name="gnm_master_mainstreamsyndication_description" value="&lt;p&gt;Stephen Hawking says he fears he may not be welcome in the United States under the Trump administration. Speaking on ITV&#x2019;s Good Morning Britain on Monday, the eminent physician expressed his concern about Trump&#x2019;s climate change policy, adding that Scott Pruitt &#x2013; the head of Environmental Protection Agency, and climate change skeptic &#x2013; should be replaced &lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https://www.theguardian.com/science/2017/mar/20/stephen-hawking-trump-good-morning-britain-interview&quot;&gt;Stephen Hawking: I fear I may not be welcome in Donald Trump&#x2019;s US&lt;/a&gt;&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;"/>
+ <meta name="shapeTag" value="lowres|h264_mezzanine|WebM|original|"/>
+ <meta name="gnm_commission_title" value="20 March 2017 Weekly Agency News"/>
+ <meta name="gnm_master_dailymotion_holdingimage" value="{&quot;id_16x9&quot;:&quot;KP-2537431&quot;,&quot;filename_16x9&quot;:&quot;12405721&quot;,&quot;url_16x9&quot;:&quot;/APInoauth/thumbnail/KP-5/KP-2537431;version=0/0?hash=682e14639698381f404a9fca71da65b6&quot;,&quot;id_4x3&quot;:&quot;KP-2537431&quot;,&quot;filename_4x3&quot;:&quot;12405721&quot;,&quot;url_4x3&quot;:&quot;/APInoauth/thumbnail/KP-5/KP-2537431;version=0/0?hash=682e14639698381f404a9fca71da65b6&quot;}"/>
+ <meta name="__version_count" value="3"/>
+ <meta name="gnm_storage_rule_projects_completed" value=""/>
+ <meta name="gnm_mm_provider" value=""/>
+ <meta name="originalVideoCodec" value="h264"/>
+ <meta name="gnm_master_licensor" value="Guardian News And Media"/>
+ <meta name="originalFormat" value="mxf"/>
+ <meta name="gnm_master_website_uploadlog" value="07:56:01 m3u8_4m: Video page updated&#10;07:55:57 mp4_desk: Video page updated&#10;07:55:51 WebM: Video page updated&#10;07:55:39 Upload Succeeded&#10;07:55:22 Composer page created&#10;07:54:37 Acquired video media&#10;07:54:28 Acquiring media...&#10;"/>
+ <meta name="representativeThumbnailNoAuth" value="/APInoauth/thumbnail/KP-5/KP-2537331;version=2/500@PAL?hash=2a9171b74c292908275db564856a80dc"/>
+ <meta name="__storagegroup_size" value="1"/>
+ <meta name="__ancestor_collection" value="KP-24296"/>
+ <meta name="gnm_master_website_headline" value="Stephen Hawking fears he may not be welcome in Trump&#x2019;s US &#x2013;&#xA0;video"/>
+ <meta name="gnm_asset_restrictions_apply" value=""/>
+ <meta name="gnm_master_generic_holdingimage_16x9" value="{&quot;id_16x9&quot;:&quot;KP-2537431&quot;,&quot;filename_16x9&quot;:&quot;12405721&quot;,&quot;url_16x9&quot;:&quot;/APInoauth/thumbnail/KP-5/KP-2537431;version=0/0?hash=682e14639698381f404a9fca71da65b6&quot;,&quot;id_4x3&quot;:&quot;KP-2537431&quot;,&quot;filename_4x3&quot;:&quot;12405721&quot;,&quot;url_4x3&quot;:&quot;/APInoauth/thumbnail/KP-5/KP-2537431;version=0/0?hash=682e14639698381f404a9fca71da65b6&quot;}"/>
+ <meta name="gnm_master_website_trail" value="200317 James B AM"/>
+ <meta name="gnm_user_skipped_edl_upload" value="true"/>
+ <meta name="__shape_last_added" value="2017-03-20T10:28:06.227Z"/>
+ <meta name="gnm_mm_ref" value=""/>
+ <meta name="gnm_master_spotify_title_id" value="GMKP25373310000000000000"/>
+ <meta name="__storage_lowres_size" value="1"/>
+ <meta name="originalAudioCodec" value="pcm_s24le"/>
+ <meta name="gnm_mm_caption" value=""/>
+ <meta name="mediaType" value="video"/>
+ <meta name="created" value="2017-03-20T07:50:53.597Z"/>
+ <meta name="__version" value="2"/>
+ <meta name="__storage_original" value="KP-16"/>
+ <meta name="gnm_mm_headline" value=""/>
+ <meta name="gnm_asset_category" value="Master"/>
+ <meta name="gnm_master_dailymotion_title" value="Stephen Hawking fears he may not be welcome in Trump&#x2019;s US &#x2013;&#xA0;video"/>
+ <meta name="__shape_size" value="9"/>
+ <meta name="gnm_master_interactive_projectref" value="KP-24299"/>
+ <meta name="__storage_WebM" value="KP-16"/>
+ <meta name="gnm_master_language" value="en"/>
+ <meta name="gnm_master_generic_source" value="ITV|Good Morning Britain|"/>
+ <meta name="gnm_master_facebook_description" value="Stephen Hawking says he fears he may not be welcome in the United States under the Trump administration. Speaking on ITV&#x2019;s Good Morning Britain on Monday, the eminent physician expressed his concern about Trump&#x2019;s climate change policy, adding that Scott Pruitt &#x2013; the head of Environmental Protection Agency, and climate change skeptic &#x2013; should be replaced Stephen Hawking: I fear I may not be welcome in Donald Trump&#x2019;s US"/>
+ <meta name="gnm_storage_rule_deletable" value=""/>
+ <meta name="gnm_master_website_byline" value=""/>
+ <meta name="gnm_mm_copyright" value=""/>
+ <meta name="__storage_lowres" value="KP-10"/>
+ <meta name="gnm_master_facebook_holdingimage_16x9" value="{&quot;id_16x9&quot;:&quot;KP-2537431&quot;,&quot;filename_16x9&quot;:&quot;12405721&quot;,&quot;url_16x9&quot;:&quot;/APInoauth/thumbnail/KP-5/KP-2537431;version=0/0?hash=682e14639698381f404a9fca71da65b6&quot;,&quot;id_4x3&quot;:&quot;KP-2537431&quot;,&quot;filename_4x3&quot;:&quot;12405721&quot;,&quot;url_4x3&quot;:&quot;/APInoauth/thumbnail/KP-5/KP-2537431;version=0/0?hash=682e14639698381f404a9fca71da65b6&quot;}"/>
+ <meta name="gnm_master_youtube_notify_channel_subscribers" value="notify_channel_subscribers"/>
+ <meta name="gnm_asset_filename" value=""/>
+ <meta name="gnm_master_youtube_allowembedding" value="allow_embedding"/>
+ <meta name="gnm_asset_restrictions_notes" value=""/>
+ <meta name="startTimeCode" value="899250@PAL"/>
+ <meta name="portal_essence_version" value="2"/>
+ <meta name="gnm_master_youtube_title" value="Hawking"/>
+ <meta name="gnm_master_youtube_embeddable" value="embeddable"/>
+ <meta name="representativeThumbnail" value="/API/thumbnail/KP-5/KP-2537331;version=2/500@PAL"/>
+ <meta name="gnm_master_spotify_licensor" value="Guardian News And Media"/>
+ <meta name="user" value="james_bullock"/>
+ <meta name="gnm_master_facebook_holdingimage" value="{&quot;id_16x9&quot;:&quot;KP-2537431&quot;,&quot;filename_16x9&quot;:&quot;12405721&quot;,&quot;url_16x9&quot;:&quot;/APInoauth/thumbnail/KP-5/KP-2537431;version=0/0?hash=682e14639698381f404a9fca71da65b6&quot;,&quot;id_4x3&quot;:&quot;KP-2537431&quot;,&quot;filename_4x3&quot;:&quot;12405721&quot;,&quot;url_4x3&quot;:&quot;/APInoauth/thumbnail/KP-5/KP-2537431;version=0/0?hash=682e14639698381f404a9fca71da65b6&quot;}"/>
+ <meta name="meta-source" value="inmeta"/>
+ <meta name="portal_mf484519" value=""/>
+ <meta name="gnm_master_generic_intendeduploadplatforms" value="Website|YouTube|"/>
+ <meta name="__storage_original_size" value="1"/>
+ <meta name="__placeholder_shape_size" value="1"/>
+ <meta name="__ancestor_collection_size" value="2"/>
+ <meta name="portal_mf182228" value=""/>
+ <meta name="original_mimetype" value="video/x-mxf-h264-pcm_s24le"/>
+ <meta name="gnm_master_generic_titleid" value="12402419"/>
+ <meta name="originalFilename" value="170320SH2.mxf"/>
+ <meta name="gnm_master_mainstreamsyndication_holdingimage" value="{&quot;id_16x9&quot;:&quot;KP-2537431&quot;,&quot;filename_16x9&quot;:&quot;12405721&quot;,&quot;url_16x9&quot;:&quot;/APInoauth/thumbnail/KP-5/KP-2537431;version=0/0?hash=682e14639698381f404a9fca71da65b6&quot;,&quot;id_4x3&quot;:&quot;KP-2537431&quot;,&quot;filename_4x3&quot;:&quot;12405721&quot;,&quot;url_4x3&quot;:&quot;/APInoauth/thumbnail/KP-5/KP-2537431;version=0/0?hash=682e14639698381f404a9fca71da65b6&quot;}"/>
+ <meta name="gnm_master_pacdata_status" value="missing"/>
+ <meta name="gnm_master_generic_remove" value=""/>
+ <meta name="durationTimeCode" value="39960000@1000000"/>
+ <meta name="gnm_master_youtube_keywords" value="65776|22641|9444|14661|13281|9046|66186|27399|"/>
+ <meta name="gnm_asset_file_last_modified" value=""/>
+ <meta name="octopus ID" value="12402419"/>
+ <meta name="gnm_job_id" value="KP-7480414"/>
+ <meta name="__storage_h264_mezzanine_size" value="1"/>
+ <meta name="gnm_storage_rule_projects_held" value=""/>
+ <meta name="gnm_master_mainstreamsyndication_publish" value="2017-03-20"/>
+ <meta name="gnm_master_publication_time" value="2017-03-20T08:20:16Z"/>
+ <meta name="__storagegroup" value="Proxies"/>
+ <meta name="gnm_storage_rule_deep_archive" value="storage_rule_deep_archive"/>
+ <meta name="gnm_master_facebook_upload_as" value="Draft"/>
+ <meta name="__collection_size" value="1"/>
+ <meta name="gnm_asset_filming_location" value=""/>
+ <meta name="gnm_asset_file_created" value=""/>
+ <meta name="startSeconds" value="35970.0"/>
+ <meta name="gnm_master_youtube_remove" value=""/>
+ <meta name="gnm_master_dailymotion_author" value="323"/>
+ <meta name="title" value="Stephen Hawking fears he may not be welcome in Trump&#x2019;s US &#x2013;&#xA0;video"/>
+ <meta name="__shapetag_lowres_hash" value="56afe8aadb5008542a22387f92827f5db200c013"/>
+ <meta name="gnm_master_generic_status" value="Published"/>
+ <meta name="gnm_mm_photographer" value=""/>
+ <meta name="itemId" value="KP-2537331"/>
+ <meta name="gnm_master_generic_uploadtype" value="Update"/>
+ <meta name="gnm_storage_rule_sensitive" value=""/>
+ <meta name="gnm_master_generic_publish" value="2017-03-20"/>
+ <meta name="gnm_master_youtube_holdingimage" value="{&quot;id_16x9&quot;:&quot;KP-2537421&quot;,&quot;filename_16x9&quot;:&quot;KP-2537331_youtube_holding.jpg&quot;,&quot;url_16x9&quot;:null,&quot;id_4x3&quot;:&quot;KP-2537421&quot;,&quot;filename_4x3&quot;:&quot;KP-2537331_youtube_holding.jpg&quot;,&quot;url_4x3&quot;:null}"/>
+ <meta name="gnm_master_youtube_allowcomments" value="allow_comments"/>
+ <meta name="gnm_mastermainstreamsyndication_aol_master_category" value="World News"/>
+ <meta name="__shape" value="KP-2587905"/>
+ <meta name="gnm_mastergeneric_syndication_rules" value="applied|ran|"/>
+ <meta name="portal_ingested" value="2017-03-20T10:27:51.636Z"/>
+ <meta name="__collection" value="KP-24299"/>
+ <meta name="originalWidth" value="1920"/>
+ <meta name="gnm_master_website_keyword_ids" value="us-news/donaldtrump|science/hawking|environment/climate-change|science/science|environment/environment|science/scienceofclimatechange|type/video|us-news/us-news|tracking/commissioningdesk/uk-video|tone/news|"/>
+ <meta name="gnm_master_website_standfirst" value="&lt;p&gt;Stephen Hawking says he fears he may not be welcome in the United States under the Trump administration. Speaking on ITV&#x2019;s Good Morning Britain on Monday, the eminent physician expressed his concern about Trump&#x2019;s climate change policy, adding that Scott Pruitt &#x2013; the head of Environmental Protection Agency, and climate change skeptic &#x2013; should be replaced &lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https://www.theguardian.com/science/2017/mar/20/stephen-hawking-trump-good-morning-britain-interview&quot;&gt;Stephen Hawking: I fear I may not be welcome in Donald Trump&#x2019;s US&lt;/a&gt;&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;"/>
+ <meta name="gnm_master_dailymotion_dailymotioncategory" value="news"/>
+ <meta name="gnm_master_youtube_allowresponses" value="allow_responses"/>
+ <meta name="gnm_master_spotify_id" value="GEKP25373310000000000000"/>
+ </meta>
+ <meta name="movie" value="%2Fsrv%2FProxies2%2FElementalOutput%2FiOS">
+ <meta name="size" value="552"/>
+ <meta name="mimetype" value="text/plain"/>
+ <meta name="aspect" value="16:9"/>
+ <meta name="streams_count" value="15"/>
+ <meta name="start_time" value="2.018667"/>
+ <meta name="format_description" value="Apple HTTP Live Streaming"/>
+ <meta name="bitrate" value="0.107421875"/>
+ <meta name="format" value=".hls"/>
+ <meta name="duration" value="N/A"/>
+ <meta name="extension" value="m3u8"/>
+ <meta name="filename" value="170320SH2.m3u8"/>
+ <meta name="escaped_path" value="%2Fsrv%2FProxies2%2FElementalOutput%2FiOS"/>
+ <meta name="path" value="/srv/Proxies2/ElementalOutput/iOS"/>
+ <meta name="emit_single_file" value="false"/>
+ <meta name="video_pid" value="481"/>
+ <meta name="pat_interval" value="0"/>
+ <meta name="use_subdirectories" value="false"/>
+ <meta name="container" value="m3u8"/>
+ <meta name="pmt_pid" value="480"/>
+ <meta name="floating_point_manifest" value="true"/>
+ <meta name="log_edit_points" value="false"/>
+ <meta name="audio_pids" value="482-498"/>
+ <meta name="include_cslg" value="false"/>
+ <meta name="include_resolution" value="true"/>
+ <meta name="alternate_audio_track" value="false"/>
+ <meta name="pcr_every_pes" value="true"/>
+ <meta name="segment_length" value="10"/>
+ <meta name="ecm_passthrough" value="false"/>
+ <meta name="type" value="apple_live_group_settings"/>
+ <meta name="use_pantos_7_codecs" value="false"/>
+ <meta name="pcr_pid" value="481"/>
+ <meta name="insert_timed_metadata" value="false"/>
+ <meta name="generate_meta_file" value="true"/>
+ <meta name="compress_manifests" value="false"/>
+ <meta name="audio_packets_per_pes" value="16"/>
+ <meta name="uri" value="/data/srv/Proxies2/ElementalOutput/iOS/"/>
+ <meta name="disable_cache" value="false"/>
+ <meta name="iframe_only_manifests" value="false"/>
+ <meta name="scte35_passthrough" value="false"/>
+ <meta name="stream_assembly_name" value="stream_assembly_1"/>
+ <meta name="name_modifier" value="_4m"/>
+ <meta name="id" value="1073032848653848664"/>
+ <meta name="full_uri" value="/data/srv/Proxies2/ElementalOutput/iOS/170320SH2.m3u8"/>
+ <meta name="order" value="1"/>
+ <meta name="min_segment_length" value="0"/>
+ <meta name="insert_program_date_time" value="false"/>
+ <meta name="caption_language_setting" value="omit"/>
+ <meta name="pmt_interval" value="0"/>
+ <meta name="vod_mode" value="true"/>
+ <meta name="nielsen_id3_passthrough" value="false"/>
+ <meta name="progressive_downloading" value="true"/>
+ </meta>
+ <meta name="track" value="0">
+ <meta name="start" value="2.040000"/>
+ <meta name="profile_name" value="Constrained Baseline"/>
+ <meta name="format_description" value="H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10"/>
+ <meta name="has_b_frames" value="0"/>
+ <meta name="type" value="vide"/>
+ <meta name="sample_aspect" value="1:1"/>
+ <meta name="format" value="H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10"/>
+ <meta name="codec_level" value="12"/>
+ <meta name="pixel_format" value="yuv420p"/>
+ <meta name="framerate" value="25/1"/>
+ <meta name="height" value="180"/>
+ <meta name="duration" value="N/A"/>
+ <meta name="aspect" value="16:9"/>
+ <meta name="bitrate" value="0"/>
+ <meta name="width" value="320"/>
+ <meta name="index" value="0"/>
+ </meta>
+ <meta name="track" value="1">
+ <meta name="start" value="2.018667"/>
+ <meta name="profile_name" value="unknown"/>
+ <meta name="format_description" value="AAC (Advanced Audio Coding)"/>
+ <meta name="type" value="audi"/>
+ <meta name="format" value="AAC (Advanced Audio Coding)"/>
+ <meta name="framerate" value="0/0"/>
+ <meta name="bitspersample" value="0"/>
+ <meta name="duration" value="N/A"/>
+ <meta name="samplerate" value="48000"/>
+ <meta name="channels" value="1"/>
+ <meta name="bitrate" value="64.453125"/>
+ <meta name="index" value="1"/>
+ </meta>
+ <meta name="track" value="2">
+ <meta name="format_description" value="unknown"/>
+ <meta name="start" value="2.018667"/>
+ <meta name="profile_name" value="unknown"/>
+ <meta name="type" value="unknown"/>
+ <meta name="format" value="unknown"/>
+ <meta name="framerate" value="0/0"/>
+ <meta name="duration" value="39.960000"/>
+ <meta name="bitrate" value="0"/>
+ <meta name="index" value="2"/>
+ </meta>
+</meta-data>

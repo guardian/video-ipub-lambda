@@ -4,20 +4,36 @@ import os
 from mock import MagicMock
 
 
-class TestRealData(unittest.TestCase):
+class TestRealDataCore(object):
+    file_name = "nofile.xml"
+    TEST_MAPPED = {}
+
+    def show_mapped_data(self, data):
+        pass
+
     def test_realdata_elastic(self):
         from Parser import Parser
         from Mapper import Mapper
         from pprint import pprint
-        
-        with open(os.path.join(os.path.dirname(__file__),'testdata/realdata_elastic.xml')) as f:
+
+        #if we're run directly rather than through a subclass there is nothing to test.
+        if len(self.TEST_MAPPED.items())==0: return
+
+        with open(self.file_name) as f:
             p = Parser(f.read())
             
         m = Mapper()
         mapped_data = m.map_metadata(p)
-        
+        self.show_mapped_data(mapped_data)
+
         pprint(mapped_data)
-        self.assertEqual(mapped_data,{
+        self.assertEqual(mapped_data,self.TEST_MAPPED)
+
+
+class TestElasticData(unittest.TestCase, TestRealDataCore):
+    file_name = os.path.join(os.path.dirname(__file__),'testdata/realdata_elastic.xml')
+
+    TEST_MAPPED = {
              u'abitrate': 122.78125,
              u'acodec': 'AAC (Advanced Audio Coding)',
              u'aspect': '16x9',
@@ -35,8 +51,34 @@ class TestRealData(unittest.TestCase):
              u'url': 'http://cdn.theguardian.tv/mainwebsite/2017/03/10/170310YusufDRTest2_h264_publish.mp4',
              u'vbitrate': 1076.6474609375,
              u'vcodec': 'H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10'
-        })
+        }
 
+
+class TestElementalM3u8Data(unittest.TestCase, TestRealDataCore):
+    file_name = os.path.join(os.path.dirname(__file__),'testdata/realdata_m3u8_elemental.xml')
+
+    TEST_MAPPED = {u'abitrate': 64.453125,
+                     u'acodec': 'AAC (Advanced Audio Coding)',
+                     u'aspect': '16x9',
+                     u'duration': '39.96',
+                     u'fcs_id': u'KP-2537331-2',
+                     u'file_size': '552',
+                     u'format': u'video/m3u8',
+                     u'frame_height': '180',
+                     u'frame_width': '320',
+                     u'mobile': '0',
+                     u'multirate': '0',
+                     u'octopus_id': '12402419',
+                     u'originalFilename': '170320SH2.mxf',
+                     u'project': 'KP-24299',
+                     u'url': 'https://cdn.theguardian.tv/HLS/2017/03/20/170320SH2.m3u8',
+                     u'vbitrate': 0.0,
+                     u'vcodec': 'H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10'
+                   }
+
+    def show_mapped_data(self, data):
+        from pprint import pprint
+        pprint(data)
 
 class TestMapperCore(object):
     """
