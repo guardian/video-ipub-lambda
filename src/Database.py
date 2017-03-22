@@ -101,7 +101,14 @@ class Database(object):
         :param project:
         :return:
         """
-        
+
+        if octid is None:
+            raise ValueError("_make_new_record: octopus_id cannot be none")
+        if filebase is None or filebase=="":
+            raise ValueError("_make_new_record: filebase cannot be None or empty")
+        if project is None or project=="":
+            logging.warning("_make_new_record: project reference is empty")
+
         cur = self._conn.cursor()
         cur.execute("INSERT INTO idmapping (filebase,octopus_id,project) values (%s,%s,%s)", (filebase,octid,project))
         self._conn.commit()

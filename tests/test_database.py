@@ -49,7 +49,13 @@ class TestDatabase(unittest.TestCase):
         self._cached_id = d._make_new_record("testfilebase",1234567,"KP-345")
         logging.info("cached id {0}".format(self._cached_id))
         self.assertIsNotNone(self._cached_id)
-        
+
+        with self.assertRaises(ValueError):
+            d._make_new_record("testfilebase",None,"")
+
+        with self.assertRaises(ValueError):
+            d._make_new_record(None,1234567,"")
+
     def test_find_in_database(self):
         from Database import Database, NotFound, InvalidData
         d = Database(make_connection=True)
