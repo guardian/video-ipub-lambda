@@ -1,6 +1,7 @@
 from BaseMapping import BaseMapping
 from JoinMapping import JoinMapping
 from FormatMapping import MIMEFormatMapping
+from StaticMapping import StaticMapping
 
 class NoMappingFound(StandardError):
     pass
@@ -16,6 +17,10 @@ class Mapper(object):
         {
             u'abitrate': 0.001,
             u'vbitrate': 0.001
+        },
+        {
+            u'abitrate': 1,
+            u'vbitrate': 1
         },
         {
             u'abitrate': 1,
@@ -80,6 +85,25 @@ class Mapper(object):
             u'vcodec'          : BaseMapping(u'track:vide:format'),
             u'originalFilename': BaseMapping(u'originalFilename'),
             u'project'         : BaseMapping(u'gnm_master_interactive_projectref')
+        },
+        {  #DR mapping
+            u'abitrate': StaticMapping(128000),
+            u'acodec': StaticMapping("aac"),
+            u'aspect': BaseMapping(u'meta:aspect_ratio'),
+            u'duration': BaseMapping(u'meta:durationSeconds'),
+            u'fcs_id': JoinMapping(u'meta:itemId', u'meta:__version'),
+            u'file_size': StaticMapping(0),
+            u'format': BaseMapping(u'movie:mimetype'),
+            u'frame_height': StaticMapping(1920),
+            u'frame_width': StaticMapping(1080),
+            u'mobile': BaseMapping(u'meta:for_mobile'),
+            u'multirate': BaseMapping(u'meta:is_multirate'),
+            u'octopus_id': BaseMapping(u'meta:gnm_master_generic_titleid'),
+            u'url': BaseMapping(u'meta:cdn_url'),
+            u'vbitrate': StaticMapping(4096),
+            u'vcodec': StaticMapping("h.264"),
+            u'originalFilename': BaseMapping(u'originalFilename'),
+            u'project': BaseMapping(u'gnm_master_interactive_projectref')
         }
     ]
 

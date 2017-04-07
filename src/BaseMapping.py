@@ -14,7 +14,7 @@ class BaseMapping(object):
         Initialise.
         :param key: key to look up in the Parser
         """
-        self.key = args[0]
+        self.key = args[0] if len(args)>0 else None
         
     def evaluate(self, parser_instance, default="(unavailable)"):
         """

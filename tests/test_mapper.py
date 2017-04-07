@@ -38,6 +38,39 @@ class TestRealData(unittest.TestCase):
         })
 
 
+class TestIpubRealData(unittest.TestCase):
+    def test_realdata_ipub(self):
+        from Parser import Parser
+        from Mapper import Mapper
+        from pprint import pprint
+
+        with open(os.path.join(os.path.dirname(__file__), 'testdata/realdata_ipub.xml')) as f:
+            p = Parser(f.read())
+
+        m = Mapper()
+        mapped_data = m.map_metadata(p)
+
+        pprint(mapped_data)
+        self.assertEqual(mapped_data,{u'abitrate': 128000.0,
+                             u'acodec': 'aac',
+                             u'aspect': '16x9',
+                             u'duration': '220.52',
+                             u'fcs_id': u'BK-17746-',
+                             u'file_size': 0,
+                             u'format': 'video/m3u8',
+                             u'frame_height': 1920,
+                             u'frame_width': 1080,
+                             u'mobile': '0',
+                             u'multirate': '0',
+                             u'octopus_id': '12137979',
+                             u'originalFilename': '170406Gorsuchmaternity_lowres.mp4',
+                             u'project': 'BK-872',
+                             u'url': 'http://cdn.theguardian.tv/HLS/2017/04/07/170406Gorsuchmaternity-173.m3u8',
+                             u'vbitrate': 4096.0,
+                             u'vcodec': 'h.264'}
+                        )
+
+
 class TestMapperCore(object):
     """
     Mixin class that implements the actual test methods
@@ -201,6 +234,7 @@ class TestMappingMIME(unittest.TestCase, TestMapperCore):
         u'originalFilename': "some_filename.mxf",
         u'project': "VX-1234"
     }
+
 
 class TestMappingIncomplete(unittest.TestCase, TestMapperCore):
     TESTDATA = {
