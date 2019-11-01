@@ -1,5 +1,5 @@
 unittest2==1.1.0
 raven==5.32.0
-requests==2.12.3
+requests==2.20.0
 mock==2.0.0
 bs4==0.0.1
