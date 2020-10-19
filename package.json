@@ -19,7 +19,7 @@
   "homepage": "https://github.com/guardian/video-ipub-lambda#readme",
   "dependencies": {
     "exec-chainable": "0.0.3",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.0",
     "gulp-babel": "^6.1.2",
     "gulp-file": "^0.3.0",
     "gulp-yaml": "^1.0.1",
